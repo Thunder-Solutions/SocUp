@@ -1,12 +1,12 @@
 'use client';
 
 import { SplashContext, SplashImage } from '@/components/splash/splashContext';
-import homeLocale from '@/locales/home';
+import gameLocale from '@/locales/the-game';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
 
-const Home = withGlobalProviders(() => {
-  const locale = homeLocale['en-US'];
+const TheGame = withGlobalProviders(() => {
+  const locale = gameLocale['en-US'];
   const splash: SplashImage = {
     src: '/images/future-tech.jpg',
     characteristic: 'dark',
@@ -36,4 +36,4 @@ const Home = withGlobalProviders(() => {
   );
 });
 
-export default Home;
+export default TheGame;
