@@ -29,7 +29,9 @@
 
 .scrolled {
   background-color: var(--color-brand-1);
-  backdrop-filter: blur(5px);
+
+  /* there's some bug with the overflow here... */
+  /* backdrop-filter: blur(5px); */
   -webkit-backdrop-filter: blur(5px);
   height: 7rem;
 }
