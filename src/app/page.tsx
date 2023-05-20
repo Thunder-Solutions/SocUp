@@ -1,13 +1,13 @@
-import { GlobalProvidersProps, withGlobalPageContext, withGlobalProviders } from '@/utilities';
-import { NextPage } from 'next';
+'use client';
 
-const Home: NextPage<GlobalProvidersProps> = withGlobalProviders(({ global }) => {
-  console.log(global.locale);
+import locale from '../locales/home';
+import { withGlobalProviders } from '@/utilities';
+
+const Home = withGlobalProviders(() => {
+  console.log(locale);
   return (
     <h1>SocUp</h1>
   );
 });
-
-Home.getInitialProps = withGlobalPageContext();
 
 export default Home;

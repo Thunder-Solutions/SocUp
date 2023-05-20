@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useDarkMode, useTheme } from '@/utilities';
+import locale from '../locales/global';
 import './theme.css'
 
 export const metadata = {
@@ -12,19 +11,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-  const faviconUrl = useDarkMode({ dark: '/icons/favicon-light.ico', light: '/icons/favicon.ico' });
-
-  // set the theme initially
-  const [theme, setTheme] = useTheme();
-  const initialTheme = useDarkMode({ dark: 'dark', light: 'base' });
-  useEffect(() => { setTheme(initialTheme); }, [initialTheme]);
-
+  console.log(locale);
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href={faviconUrl} />
-      </head>
+    <html lang="en" className="base">
       <body>
         {children}
       </body>

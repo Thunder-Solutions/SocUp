@@ -1,4 +1,4 @@
-import { checkType, getURL } from './general';
+import { getURL } from './general';
 import { GenericObj } from './types';
 
 export type RequestWithAbort<T> = {
