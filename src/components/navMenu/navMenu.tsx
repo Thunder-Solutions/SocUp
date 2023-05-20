@@ -1,9 +1,9 @@
 import css from './navMenu.module.css';
 import { useEffect, useState, useRef } from 'react';
-import { getClassName, NOOP, useContextState } from 'utilities';
-import Link from 'components/link/link';
-import Icon from 'components/icon/icon';
-import { OverlayContext } from 'components/overlay/overlay';
+import { getClassName, NOOP, useContextState } from '@/utilities';
+import Link from '@/components/link/link';
+import Icon from '@/components/icon/icon';
+import { OverlayContext } from '@/components/overlay/overlay';
 
 export type NavMenuItem = {
   text: string,

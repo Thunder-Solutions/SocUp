@@ -1,9 +1,9 @@
-import Link from 'components/link/link';
-import Code from 'components/code/code';
+import Link from '@/components/link/link';
+import Code from '@/components/code/code';
 import ReactMarkdown from 'react-markdown';
 import { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown';
-import Heading from'components/heading/heading';
-import { DivTagProps } from 'utilities';
+import Heading from'@/components/heading/heading';
+import { DivTagProps } from '@/utilities';
 
 type MarkdownProps = DivTagProps & ReactMarkdownOptions;
 

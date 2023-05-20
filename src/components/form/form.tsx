@@ -1,6 +1,6 @@
-import Spinner from 'components/spinner/spinner';
+import Spinner from '@/components/spinner/spinner';
 import { useState } from 'react';
-import { getClassName, FormTagProps } from 'utilities';
+import { getClassName, FormTagProps } from '@/utilities';
 import css from './form.module.css';
 import { DEFAULT_FORM_STATE, DEFAULT_SUBMIT, FormContext } from './formUtilities';
 

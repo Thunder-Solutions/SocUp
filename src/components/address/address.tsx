@@ -1,8 +1,8 @@
-import Card from 'components/card/card';
-import Icon from 'components/icon/icon';
-import Link from 'components/link/link';
+import Card from '@/components/card/card';
+import Icon from '@/components/icon/icon';
+import Link from '@/components/link/link';
 import css from './address.module.css';
-import { GenericTagProps, PropTypes } from 'utilities';
+import { GenericTagProps } from '@/utilities';
 
 export type AddressProps = {
   /**
@@ -66,19 +66,6 @@ const Address = ({
       </address>
     </Card>
   );
-};
-
-Address.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  tel: PropTypes.string,
-  phone: PropTypes.string,
-  addressLine1: PropTypes.string,
-  addressLine2: PropTypes.string,
-  email: PropTypes.string,
-  isBusiness: PropTypes.bool,
-  test: PropTypes.element,
-  test2: PropTypes.elementType,
 };
 
 export default Address;

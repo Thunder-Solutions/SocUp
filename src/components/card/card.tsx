@@ -1,5 +1,5 @@
 import css from './card.module.css';
-import { DivTagProps, getClassName } from 'utilities';
+import { DivTagProps, getClassName } from '@/utilities';
 
 export type CardProps = DivTagProps;
 

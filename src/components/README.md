@@ -32,7 +32,7 @@ For a detailed overview of best practices, read the [component development guide
       The `<AuthorBio>` component above reuses the style of `<Card>` while composing additional styles on top.
 2. Each component should be exported from `components/index.js` to allow for single-line imports, eg:
     ```js
-    import { Card, AuthorBio, ArticlePreview } from 'components'
+    import { Card, AuthorBio, ArticlePreview } from '@/components'
     ```
 3. Any component that imports other components should **not** import from the `components/index` file as in the example above.  This is because it will create a circular dependency and potentially cause issues with the order in which the compiler imports modules.  Imports from this layer are only to be used from outside this folder, namely the `pages/` directory.
 

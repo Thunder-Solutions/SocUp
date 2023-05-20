@@ -1,4 +1,4 @@
-import { DivTagProps } from 'utilities';
+import { DivTagProps } from '@/utilities';
 import css from './spinner.module.css';
 
 export type SpinnerProps = DivTagProps;

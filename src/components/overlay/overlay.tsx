@@ -1,5 +1,5 @@
 import css from './overlay.module.css';
-import { DivTagProps, createContextState, getClassName } from 'utilities';
+import { DivTagProps, createContextState, getClassName } from '@/utilities';
 import { useState } from 'react';
 
 export const OverlayContext = createContextState(false);

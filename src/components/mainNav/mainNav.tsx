@@ -1,9 +1,9 @@
 import css from './mainNav.module.css';
-import LocaleContext from 'locales/localeContext';
+import { LocaleContext } from '@/context/locale';
 import { useContext, useEffect, useState } from 'react';
-import NavMenu from 'components/navMenu/navMenu';
-import Icon from 'components/icon/icon';
-import Overlay from 'components/overlay/overlay';
+import NavMenu from '@/components/navMenu/navMenu';
+import Icon from '@/components/icon/icon';
+import Overlay from '@/components/overlay/overlay';
 
 export type MainNavProps = {
   open?: boolean,

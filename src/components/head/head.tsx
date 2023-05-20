@@ -31,7 +31,7 @@ export type Meta = {
   image: string,
 }
 
-export type HeadProps = PropsWithChildren<{
+export type HeadProps = PropsWithChildren<Partial<{
   /**
    * This title takes precedence over the title sent in the `meta` prop
    */
@@ -44,7 +44,7 @@ export type HeadProps = PropsWithChildren<{
    * The config is used as a base to build relative values in the `meta` prop
    */
   config: Config,
-}>
+}>>
 
 /**
  * This is the default config, implicit with every use of `<Head>` in the absence of overrides.

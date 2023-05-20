@@ -1,4 +1,4 @@
-import { DivTagProps } from 'utilities';
+import { DivTagProps } from '@/utilities';
 import css from './group.module.css';
 
 export type GroupProps = DivTagProps

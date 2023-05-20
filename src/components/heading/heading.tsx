@@ -1,5 +1,5 @@
 import css from './heading.module.css';
-import { DivTagProps, HeadingTagProps } from 'utilities';
+import { DivTagProps, HeadingTagProps } from '@/utilities';
 
 export type HeadingComponentProps = {
   /**

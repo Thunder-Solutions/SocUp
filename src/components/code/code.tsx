@@ -1,7 +1,7 @@
 import css from './code.module.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { useEffect, useState } from 'react';
-import { GenericTagProps } from 'utilities';
+import { GenericTagProps } from '@/utilities';
 
 export type CodeProps = {
   /**

@@ -1,5 +1,5 @@
-import Link, { LinkComponentProps } from 'components/link/link';
-import { getClassName, ButtonTagProps } from 'utilities';
+import Link, { LinkComponentProps } from '@/components/link/link';
+import { getClassName, ButtonTagProps } from '@/utilities';
 import css from './button.module.css';
 import { PropsWithChildren } from 'react';
 

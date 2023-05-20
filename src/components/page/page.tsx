@@ -1,6 +1,6 @@
-import { DivTagProps } from 'utilities';
+import { DivTagProps } from '@/utilities';
 import css from './page.module.css';
-import { SiteFooter, SiteHeader } from 'components';
+import { SiteFooter, SiteHeader } from '@/components';
 
 export type PageProps = DivTagProps;
 

@@ -1,5 +1,5 @@
-import Icon from 'cmsComponents/icon/icon';
-import { NOOP, SelectTagProps } from 'utilities';
+import Icon from '../../icon/icon';
+import { NOOP, SelectTagProps } from '@/utilities';
 import { PropsWithLabel, getValidationHelpers } from '../formUtilities';
 import Label from '../label/label';
 import css from './select.module.css';

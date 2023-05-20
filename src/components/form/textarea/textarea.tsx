@@ -1,7 +1,7 @@
 import css from './textarea.module.css';
 import { PropsWithLabel, getValidationHelpers } from '../formUtilities';
 import Label from '../label/label';
-import { NOOP, TextareaTagProps } from 'utilities';
+import { NOOP, TextareaTagProps } from '@/utilities';
 import { ChangeEventHandler } from 'react';
 
 export type TextareaComponentProps = PropsWithLabel<{

@@ -1,8 +1,8 @@
 import css from './siteHeader.module.css';
-import { GenericTagProps, getClassName, useScroll, useTheme } from 'utilities';
-import MainNav from 'components/mainNav/mainNav';
+import { GenericTagProps, getClassName, useScroll, useTheme } from '@/utilities';
+import MainNav from '@/components/mainNav/mainNav';
 import { useContext } from 'react';
-import SplashContext from 'components/splash/splashContext';
+import SplashContext from '@/components/splash/splashContext';
 
 export type SiteHeaderProps = {
   pageId?: string,

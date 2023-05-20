@@ -1,9 +1,9 @@
-import Link from 'components/link/link';
-import LocaleContext from 'locales/localeContext';
+import Link from '@/components/link/link';
+import { LocaleContext } from '@/context/locale';
 import { Fragment, useContext } from 'react';
 import css from './siteFooter.module.css';
-import Icon from 'components/icon/icon';
-import { GenericTagProps } from 'utilities';
+import Icon from '@/components/icon/icon';
+import { GenericTagProps } from '@/utilities';
 
 export type SiteFooterProps = GenericTagProps;
 
