@@ -16,17 +16,19 @@ export type DialogComponentProps = {
 const Dialog = ({ children, className = '', title, openState, onClose = NOOP, ...props }: DialogComponentProps) => {
 
   const dialogClass = `${className} ${css.dialog}`;
-  const dialogRef = useRef(null);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   // take the entire state as a prop to give the parent control
   // over the open/closed state of the dialog, while also
   // allowing us to manipulate it from the inside.
-  const [open, setOpen] = openState || useState(false);
+  // @eslint-disable-next-line (we want useState conditionally because it's a fallback)
+  const [open, setOpen] = openState ?? useState(false);
   const close = () => { setOpen(false); };
 
   // this effect encapsulates the polyfill and window events,
   // and does NOT need to be rerun multiple times.
   useEffect(() => {
+    if (dialogRef.current === null) return;
     DialogPolyfill.registerDialog(dialogRef.current);
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Esc' || event.key === 'Escape') {

@@ -29,6 +29,7 @@ const Textarea = ({ children, ...props }: TextareaComponentProps) => {
   });
 
   const handleInput: ChangeEventHandler = event => {
+    if (!inputRef.current) return onInput(event);
     inputRef.current.value = autoFormat(inputRef.current.value);
     validate(event.nativeEvent);
     onInput(event);

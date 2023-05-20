@@ -24,7 +24,7 @@ type RawButtonLinkProps = {
 
 export type ButtonLinkProps = PropsWithChildren<RawButtonLinkProps & Omit<LinkComponentProps, keyof RawButtonLinkProps>>;
 
-Button.Link = ({ children, className = '', wrapperClass = '', type = '', ...props }: ButtonLinkProps) => {
+const ButtonLink = ({ children, className = '', wrapperClass = '', type = '', ...props }: ButtonLinkProps) => {
 
   const buttonClass = getClassName({
     [css.primary]: type === 'primary',
@@ -34,6 +34,8 @@ Button.Link = ({ children, className = '', wrapperClass = '', type = '', ...prop
     <Link {...props} type="none" className={buttonClass} wrapperClass={wrapperClass}>{children}</Link>
   );
 };
+
+Button.Link = ButtonLink;
 
 export default Button;
 

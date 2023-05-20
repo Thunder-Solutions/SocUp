@@ -63,6 +63,8 @@ const Icon = ({ type, className = '', iconClass = '', ...props }: IconProps) => 
     Page: RiPagesLine,
     Component: BiBookContent,
   };
+
+  // @ts-ignore
   const CurrentIcon: IconType = iconMap[type] ?? (() => <></>);
   return (
     <span className={`${css.iconOuterWrapper} ${className}`}>

@@ -2,6 +2,7 @@ import css from './code.module.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { useEffect, useState } from 'react';
 import { GenericTagProps } from '@/utilities';
+import { SyntaxHighlighterProps } from 'react-syntax-highlighter';
 
 export type CodeProps = {
   /**
@@ -21,12 +22,12 @@ const Code = ({ inline, className, children, ...props }: CodeProps) => {
     };
     setPrismTheme();
   }, []);
-  return !inline && match
+  return !inline && match?.[1]
     ? <SyntaxHighlighter
         style={theme}
         language={match[1]}
         PreTag="div"
-        {...props}
+        {...(props as SyntaxHighlighterProps)}
       >
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>

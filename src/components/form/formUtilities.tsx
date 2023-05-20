@@ -12,7 +12,7 @@ export const FormContext = createContextState(DEFAULT_FORM_STATE);
 
 export const DEFAULT_SUBMIT = (data: FormData) => {
   console.group('Form submitted without a handler.');
-  console.log('Form Data:', [...data.entries()]);
+  // console.log('Form Data:', [...data.entries()]);
   console.groupEnd();
   return 'The form was submitted.';
 };

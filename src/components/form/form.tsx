@@ -1,5 +1,5 @@
 import Spinner from '@/components/spinner/spinner';
-import { useState } from 'react';
+import { InvalidEvent, SyntheticEvent, useState } from 'react';
 import { getClassName, FormTagProps } from '@/utilities';
 import css from './form.module.css';
 import { DEFAULT_FORM_STATE, DEFAULT_SUBMIT, FormContext } from './formUtilities';
@@ -13,9 +13,9 @@ const Form = ({ children, onSubmit = DEFAULT_SUBMIT }: FormComponentProps) => {
   const [loading, setLoading] = useState(false);
   const { valid, validated, validationMessage } = formState;
 
-  const handleInvalid = event => {
+  const handleInvalid = (event: SyntheticEvent<HTMLFormElement, InvalidEvent>) => {
     const form = event.currentTarget;
-    const invalidInput = [...form.elements].find(input => !input.checkValidity());
+    const invalidInput = [...form.elements].find(input => !(input as HTMLInputElement).checkValidity()) as HTMLInputElement;
     setFormState({
       valid: false,
       validated: true,
@@ -23,13 +23,13 @@ const Form = ({ children, onSubmit = DEFAULT_SUBMIT }: FormComponentProps) => {
     });
   };
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
     event.preventDefault();
     const form = event.currentTarget;
     setLoading(true);
     try {
       const formData = new FormData(form);
-      const { name, value } = event.nativeEvent.submitter ?? {};
+      const { name, value } = (event.nativeEvent.submitter ?? {}) as HTMLButtonElement;
       if (name) formData.append(name, value);
       const successMessage = await onSubmit(formData) ?? 'The form has been submitted.';
       setFormState({
@@ -54,7 +54,10 @@ const Form = ({ children, onSubmit = DEFAULT_SUBMIT }: FormComponentProps) => {
   }, css.message);
 
   return (
+    // @ts-ignore
     <FormContext.Provider value={{ value: formState, setValue: setFormState }}>
+
+      {/* @ts-ignore */}
       <form className={css.form} onSubmit={handleSubmit} onInvalid={handleInvalid}>
         {loading
           ? <div className={css.loadingOverlay}><Spinner /></div>

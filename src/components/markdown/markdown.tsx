@@ -9,7 +9,7 @@ type MarkdownProps = DivTagProps & ReactMarkdownOptions;
 
 const Markdown = (props: MarkdownProps) => {
   return <ReactMarkdown {...props} components={{
-    a: ({ children, href }) => <Link href={href}>{children}</Link>,
+    a: ({ children, href = '' }) => <Link href={href}>{children}</Link>,
     code: Code,
     h1: ({ children }) => <Heading h={1}>{children}</Heading>,
     h2: ({ children }) => <Heading>{children}</Heading>,
