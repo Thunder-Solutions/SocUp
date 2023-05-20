@@ -2,56 +2,50 @@ export default {
   'en-US': {
     nav: [
       {
-        text: 'About',
-        href: '/about'
+        text: 'The Game',
+        href: '/the-game',
       },
       {
-        text: 'Contact',
-        href: '/contact'
+        text: 'For Business',
+        href: '/for-business',
       },
       {
-        text: 'Examples',
-        href: '/examples',
-        children: [
-          {
-            text: 'To Do Example',
-            href: '/examples/to-dos'
-          },
-          {
-            text: 'Forms Example',
-            href: '/examples/forms'
-          },
-        ],
+        text: 'Vision',
+        href: '/vision',
+      },
+      {
+        text: 'Sign Up',
+        href: '/sign-up',
       },
     ],
     siteMap: [
       {
         text: 'Boilerplate Theme',
-        href: '/'
+        href: '/',
       },
       {
         text: 'About',
-        href: '/about'
+        href: '/about',
       },
       {
         text: 'Contact',
-        href: '/contact'
+        href: '/contact',
       },
       {
         text: 'To Do Example',
-        href: '/to-dos'
+        href: '/to-dos',
       },
     ],
     social: [
       {
         type: 'Facebook',
         title: 'Follow Us On Facebook',
-        href: 'https://www.facebook.com/thundersolutionsofficial'
+        href: 'https://www.facebook.com/thundersolutionsofficial',
       },
       {
         type: 'LinkedIn',
         title: 'Follow Us On LinkedIn',
-        href: 'https://www.linkedin.com/company/thunder-solutions'
+        href: 'https://www.linkedin.com/company/thunder-solutions',
       },
     ],
     copyright: '© Thunder Solutions LLC {year} - ALL RIGHTS RESERVED',

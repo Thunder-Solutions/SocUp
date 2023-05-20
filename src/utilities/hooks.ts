@@ -81,7 +81,7 @@ export const useDebounce = <T, A>(
 /**
  * A custom useState hook which updates on scroll
  */
-export const useScroll = (element : HTMLElement) : [boolean, number[], number[]] => {
+export const useScroll = (element?: HTMLElement) : [boolean, number[], number[]] => {
   const [scrolled, setScrolled] = useState(false);
   const [coords, setCoords] = useState([0, 0, 600, 800]);
   const [dimensions, setDimensions] = useState([800, 600]);

@@ -1,8 +1,9 @@
 .siteHeader {
+  color: var(--color-brand-1-c);
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   grid-template-rows: minmax(0, 1fr);
-  height: 12rem;
+  height: 7rem;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -27,7 +28,9 @@
 }
 
 .scrolled {
-  background-color: var(--color-site-2);
+  background-color: var(--color-brand-1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   height: 7rem;
 }
 

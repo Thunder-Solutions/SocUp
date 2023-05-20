@@ -28,3 +28,5 @@ export { default as Fieldset } from './form/fieldset/fieldset';
 export { default as Select } from './form/select/select';
 export { default as Dialog } from './dialog/dialog';
 export { default as Checkbox } from './form/checkbox/checkbox';
+export { default as SiteTitle } from './siteTitle/siteTitle';
+export { default as InfoPanel } from './infoPanel/infoPanel';

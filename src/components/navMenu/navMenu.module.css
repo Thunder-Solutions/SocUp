@@ -1,7 +1,11 @@
 .nav {
-  background-color: var(--color-site-2);
+  background-color: var(--color-brand-1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-sizing: border-box;
+  color: var(--color-brand-1-c);
   display: grid;
+  font-family: var(--font-display);
   gap: 0.5rem;
   grid-auto-rows: min-content;
   grid-template-columns: minmax(0, 1fr);
@@ -11,10 +15,20 @@
   padding: 0.5rem 0;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
+  text-align: right;
   transition: visibility 0.5s, max-width 0.5s;
   width: 75vw;
   z-index: 1;
+}
+
+.siteTitle {
+  font-family: var(--font-logo);
+  font-size: 4rem;
+}
+
+.close {
+  font-size: 4rem;
 }
 
 .nav:not(.navOpen) {
@@ -39,9 +53,10 @@
 .nav .link:hover,
 .nav .link:active,
 .nav .link:visited {
+  box-sizing: border-box;
   color: var(--color-site-2-c);
   display: block;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   text-decoration: none;
   transition: all 0.5s;
 }
@@ -62,4 +77,5 @@
 
 .nav .toggler {
   border-bottom: 0.1rem solid;
+  text-align: left;
 }

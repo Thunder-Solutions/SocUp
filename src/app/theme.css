@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;800&family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Bruno+Ace&family=Inter&display=swap');
 
 /* Please review the README in this folder to better
   understand the color naming convention. */
@@ -6,9 +6,9 @@
 :root {
 
   /* Static colors regardless of theme */
-  --color-brand-1: #413451;
+  --color-brand-1: rgba(0, 2, 56, 0.2);
   --color-brand-1-c: #ffffff;
-  --color-brand-2: #71b5db;
+  --color-brand-2: #1400FF;
 
   /* These colors are intended to contrast against images
     no matter which theme is used. */
@@ -18,8 +18,9 @@
   --color-ltimg-c: #dce6e9;
 
   /* Default fonts, before theme overrides */
-  --font-display: 'Suez One', serif;
-  --font-content: 'Open Sans', sans-serif;
+  --font-logo: 'Monoton', 'serif';
+  --font-display: 'Bruno Ace', serif;
+  --font-content: 'Inter', sans-serif;
 
   /* Setting as few document defaults as possible in favor of
     encapsulated CSS at the component level */

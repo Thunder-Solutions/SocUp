@@ -1,7 +1,7 @@
 import css from './splash.module.css';
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
 import { DivTagProps, getClassName } from '@/utilities';
-import SplashContext from './splashContext';
+import { SplashContext } from './splashContext';
 import { useContext } from 'react';
 
 type SplashProps = DivTagProps;

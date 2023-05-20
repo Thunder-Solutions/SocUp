@@ -33,10 +33,10 @@ const NavMenu = ({
   const [_, setShowOverlay] = useContextState(OverlayContext);
   useEffect(() => {
     if (!nested) setShowOverlay(open);
-    const handleWindowClick = event => {
+    const handleWindowClick = (event: MouseEvent) => {
       if (open) {
-        if (event.target.closest('nav[data-top=true]') === navRef.current) return;
-        if (event.target.closest('nav') === navRef.current) return;
+        if ((event.target as HTMLElement).closest('nav[data-top=true]') === navRef.current) return;
+        if ((event.target as HTMLElement).closest('nav') === navRef.current) return;
         event.preventDefault();
         event.stopPropagation();
         toggle();
@@ -59,7 +59,7 @@ const NavMenu = ({
       <button onClick={toggle} className={`${css.link} ${css.linkWithIcon} ${css.toggler}`}>
         {nested
           ? <><Icon type="Previous" /> <span>Back</span></>
-          : <><span>Close Menu</span> <Icon type="Close" /></>
+          : <><span className={css.siteTitle}>SocUp</span> <Icon className={css.close} type="Close" /></>
         }
       </button>
       {href
@@ -68,9 +68,9 @@ const NavMenu = ({
           </Link>
         : <></>
       }
-      {menuItems.map(({ text, href, children }) => {
+      {menuItems.map(({ text, href = '', children }) => {
         if (children) {
-          const mainItem = href ? { href, text } : null;
+          const mainItem = href ? { href, text } : undefined;
           const [open, setOpen] = useState(false);
           const toggle = () => { setOpen(!open); };
           return (

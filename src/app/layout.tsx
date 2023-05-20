@@ -1,4 +1,3 @@
-import locale from '../locales/global';
 import './theme.css'
 
 export const metadata = {
@@ -11,7 +10,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  console.log(locale);
   return (
     <html lang="en" className="base">
       <body>

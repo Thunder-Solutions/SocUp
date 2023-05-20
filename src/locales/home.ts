@@ -1,7 +1,14 @@
 export default {
   'en-US': {
-    title: 'Boilerplate Theme',
-    subtitle: 'A Website Template by Thunder Solutions',
-    main: '*italic text* test **bold text** test _italic text_ test `code` test [hyperlink](/test/link) test\n>blockquote line 1\n>blockquote line 2\ntest\n```js\nconst ex = \'example\'\nconsole.log(\'code\')\nalert(\'block\')\n```\ntest\n# h1 title\n## h2 title\n### h3 title\n1. testing\n    1. nested list\n2. ordered\n3. list\nhorizontal rule\n\n---\n\n- testing\n    - nested list\n\n- unordered\n- list\n![alt text](/logos/logo.svg)',
+    title: '> Society has entered the chat.',
+    problemTitle: 'The Problem',
+    problemDesc: `There are a lot of problems that society and the economy face. People are
+spending more time alone than ever before, money spending continues to decline throughout
+the 21st century, and both the business and consumer confidence indexes are declining. By
+isolating themselves, people are escaping from reality rather than embracing it. The velocity of
+money decline is tied to the decline of the confidence indexes.`,
+    solutionTitle: 'Our Solution',
+    solutionDesc: `SocUp is an interactive game experience that solves problems through
+creative capitalism and crowd sourcing.`,
   },
 }

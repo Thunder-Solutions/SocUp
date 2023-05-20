@@ -10,6 +10,4 @@ const DEFAULT_SPLASH: SplashImage = {
   characteristic: 'dark',
 };
 
-const SplashContext = createContext<SplashImage>(DEFAULT_SPLASH);
-
-export default SplashContext;
+export const SplashContext = createContext<SplashImage>(DEFAULT_SPLASH);

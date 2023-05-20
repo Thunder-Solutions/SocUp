@@ -1,7 +1,6 @@
-.container {
+.banner {
+  background-color: black;
   box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 80rem;
-  padding: 0 1rem;
-  width: 100%;
+  padding: 20rem 0;
+  height: 150vh;
 }
