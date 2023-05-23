@@ -1,14 +1,14 @@
 'use client';
 
 import { SplashContext, SplashImage } from '@/components/splash/splashContext';
-import gameLocale from '@/locales/the-game';
+import visionLocale from '@/locales/vision';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
 
 const TheGame = withGlobalProviders(() => {
-  const locale = gameLocale['en-US'];
+  const locale = visionLocale['en-US'];
   const splash: SplashImage = {
-    src: '/images/future-tech.jpg',
+    src: '/images/galaxy.jpg',
     characteristic: 'dark',
   };
   return (
@@ -23,12 +23,16 @@ const TheGame = withGlobalProviders(() => {
         </Splash>
         <Container>
           <InfoPanel>
-            <Heading>{locale.problemTitle}</Heading>
-            <p>{locale.problemDesc}</p>
+            <Heading>{locale.collaborationTitle}</Heading>
+            <p>{locale.collaborationDesc}</p>
           </InfoPanel>
           <InfoPanel>
-            <Heading>{locale.solutionTitle}</Heading>
-            <p>{locale.solutionDesc}</p>
+            <Heading>{locale.prosperityTitle}</Heading>
+            <p>{locale.prosperityDesc}</p>
+          </InfoPanel>
+          <InfoPanel>
+            <Heading>{locale.spaceTitle}</Heading>
+            <p>{locale.spaceDesc}</p>
           </InfoPanel>
         </Container>
       </Page>

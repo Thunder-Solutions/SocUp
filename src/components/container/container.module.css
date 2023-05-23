@@ -2,5 +2,5 @@
   background-color: black;
   box-sizing: border-box;
   padding: 20rem 0;
-  height: 150vh;
+  height: var(--height, 180vh);
 }

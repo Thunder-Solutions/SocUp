@@ -1,12 +1,12 @@
 'use client';
 
 import { SplashContext, SplashImage } from '@/components/splash/splashContext';
-import gameLocale from '@/locales/the-game';
+import signUpLocale from '@/locales/sign-up';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
 
 const TheGame = withGlobalProviders(() => {
-  const locale = gameLocale['en-US'];
+  const locale = signUpLocale['en-US'];
   const splash: SplashImage = {
     src: '/images/future-tech.jpg',
     characteristic: 'dark',
@@ -23,12 +23,8 @@ const TheGame = withGlobalProviders(() => {
         </Splash>
         <Container>
           <InfoPanel>
-            <Heading>{locale.problemTitle}</Heading>
-            <p>{locale.problemDesc}</p>
-          </InfoPanel>
-          <InfoPanel>
-            <Heading>{locale.solutionTitle}</Heading>
-            <p>{locale.solutionDesc}</p>
+            <Heading>{locale.reserveTitle}</Heading>
+            <p>{locale.reserveDesc}</p>
           </InfoPanel>
         </Container>
       </Page>

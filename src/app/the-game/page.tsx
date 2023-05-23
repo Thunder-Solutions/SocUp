@@ -3,12 +3,12 @@
 import { SplashContext, SplashImage } from '@/components/splash/splashContext';
 import gameLocale from '@/locales/the-game';
 import { withGlobalProviders } from '@/utilities';
-import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
+import { Container, Head, Heading, InfoPanel, Page, SiteTitle, Splash } from '@/components';
 
 const TheGame = withGlobalProviders(() => {
   const locale = gameLocale['en-US'];
   const splash: SplashImage = {
-    src: '/images/future-tech.jpg',
+    src: '/images/people-having-fun.jpg',
     characteristic: 'dark',
   };
   return (
@@ -23,12 +23,16 @@ const TheGame = withGlobalProviders(() => {
         </Splash>
         <Container>
           <InfoPanel>
-            <Heading>{locale.problemTitle}</Heading>
-            <p>{locale.problemDesc}</p>
+            <Heading>{locale.howToPlayTitle}</Heading>
+            <p>{locale.howToPlayDesc}</p>
           </InfoPanel>
           <InfoPanel>
-            <Heading>{locale.solutionTitle}</Heading>
-            <p>{locale.solutionDesc}</p>
+            <Heading>{locale.dataTitle}</Heading>
+            <p>{locale.dataDesc}</p>
+          </InfoPanel>
+          <InfoPanel>
+            <Heading>{locale.upTeamsTitle}</Heading>
+            <p>{locale.upTeamsDesc}</p>
           </InfoPanel>
         </Container>
       </Page>
