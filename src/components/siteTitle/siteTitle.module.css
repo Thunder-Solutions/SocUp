@@ -3,4 +3,6 @@
   font-family: var(--font-logo);
   font-weight: normal;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }

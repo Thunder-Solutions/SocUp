@@ -30,13 +30,7 @@ const Splash = ({ children, className = '', ...props }: SplashProps) => {
         ]}
         style={{ aspectRatio: '2 / 1' }}
       >
-        <Parallax
-          className={css.splashContent}
-          speed={20}
-          opacity={[5, -1]}
-        >
-          {children}
-        </Parallax>
+        {children}
       </ParallaxBanner>
       <Parallax
         className={css.scrollIndicator}
