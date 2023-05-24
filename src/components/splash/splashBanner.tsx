@@ -1,12 +1,11 @@
 import css from './splash.module.css';
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
-import { DivTagProps, getClassName } from '@/utilities';
+import { getClassName } from '@/utilities';
 import { SplashContext } from './splashContext';
 import { useContext } from 'react';
+import { SplashProps } from './splash';
 
-export type SplashProps = DivTagProps
-
-const Splash = ({ children, className = '', ...props }: SplashProps) => {
+const SplashBanner = ({ children, className = '', ...props }: SplashProps) => {
 
   const image = useContext(SplashContext);
 
@@ -15,7 +14,7 @@ const Splash = ({ children, className = '', ...props }: SplashProps) => {
     [css.light]: image.characteristic === 'light',
   }, css.splashContainer, className);
 
-  const splashClass = `${css.full} ${css.splash}`;
+  const splashClass = `${css.banner} ${css.splash}`;
 
   return (
     <div {...props} className={splashContainerClass}>
@@ -29,25 +28,12 @@ const Splash = ({ children, className = '', ...props }: SplashProps) => {
           },
         ]}
         style={{ aspectRatio: '2 / 1' }}
-      >
-        <Parallax
-          className={css.splashContent}
-          speed={20}
-          opacity={[5, -1]}
-        >
-          {children}
-        </Parallax>
-      </ParallaxBanner>
-      <Parallax
-        className={css.scrollIndicator}
-        opacity={[1, -0.5]}
-      >
-        <span className={css.scrollText}>
-          SCROLL
-        </span>
-      </Parallax>
+      />
+      <div className={css.splashBannerContent}>
+        {children}
+      </div>
     </div>
   );
 };
 
-export default Splash;
+export default SplashBanner;

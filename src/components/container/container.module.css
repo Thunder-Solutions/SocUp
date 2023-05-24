@@ -1,6 +1,5 @@
 .banner {
   background-color: black;
   box-sizing: border-box;
-  padding: 20rem 0;
   height: var(--height, 180vh);
 }

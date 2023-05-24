@@ -13,12 +13,14 @@ export type HeadingComponentProps = {
   h?: number,
 } & (DivTagProps | HeadingTagProps);
 
-const Heading = ({ children, h = 2 }: HeadingComponentProps) => {
+const Heading = ({ children, h = 2, className = '', ...props }: HeadingComponentProps) => {
 
   // if `h` is 0 (or a non-number) remove all semantics completely
   const H = (h === 0 || isNaN(h)) ? (props: DivTagProps) => <div {...props} /> : `h${h}`;
 
-  return <H className={css.title}>{children}</H>;
+  const headingClass = `${className} ${css.title}`;
+
+  return <H className={headingClass} {...props}>{children}</H>;
 };
 
 export default Heading;

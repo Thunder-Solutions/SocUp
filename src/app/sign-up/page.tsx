@@ -3,7 +3,7 @@
 import { SplashContext, SplashImage } from '@/components/splash/splashContext';
 import signUpLocale from '@/locales/sign-up';
 import { withGlobalProviders } from '@/utilities';
-import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
+import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
 
 const TheGame = withGlobalProviders(() => {
   const locale = signUpLocale['en-US'];
@@ -15,12 +15,9 @@ const TheGame = withGlobalProviders(() => {
     <SplashContext.Provider value={splash}>
       <Page id="Home">
         <Head/>
-        <Splash>
-          <SiteTitle />
-          <InfoPanel>
-            <Heading>{locale.title}</Heading>
-          </InfoPanel>
-        </Splash>
+        <SplashBanner>
+          <PageHeading title={locale.title} />
+        </SplashBanner>
         <Container>
           <InfoPanel>
             <Heading>{locale.reserveTitle}</Heading>

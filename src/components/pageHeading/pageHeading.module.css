@@ -1,5 +1,8 @@
 .header {
-  padding: 2rem 4rem;
+  background-color: var(--color-brand-1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 4rem 4rem;
 }
 
 .title,
@@ -10,13 +13,20 @@
 
 .title {
   border-bottom: 0.1rem solid;
-  font-size: 6rem;
+  font-size: 3rem;
   margin: 0 auto;
-  max-width: 75rem;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
 }
 
 .subtitle {
   padding-top: 0.5rem;
   font-weight: normal;
+}
+
+@media (min-width: 45em) {
+  .title { font-size: 4rem; }
+}
+
+@media (min-width: 63em) {
+  .title { font-size: 5rem; }
 }

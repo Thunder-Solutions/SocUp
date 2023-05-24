@@ -13,20 +13,30 @@
 }
 
 .splash {
-  align-items: center;
   background-color: black;
   box-sizing: border-box;
+}
+
+.full {
+  align-items: center;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  height: 100vh;
   justify-items: center;
-  padding: 20rem 0;
+  height: 100vh;
+  padding: 20vh 0;
 }
 
-.splashContent {
-  padding-top: 4rem;
+.banner {
+  height: 50vh;
 }
 
+.splashBannerContent {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.splashBannerContent *,
 .splashContent * {
   color: var(--color);
 }

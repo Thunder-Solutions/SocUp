@@ -1,7 +1,7 @@
 .infoPanel {
   background-color: var(--color-brand-1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--color-brand-1-c);
   width: 100vw;
   position: relative;
@@ -11,7 +11,7 @@
 .container {
   box-sizing: border-box;
   margin: 10rem auto;
-  max-width: 50rem;
+  max-width: 60rem;
   padding: 3rem 1rem;
   width: 100%;
   text-align: center;

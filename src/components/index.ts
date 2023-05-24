@@ -8,6 +8,7 @@ export { default as ErrorMessage } from './errorMessage/errorMessage';
 export { default as Markdown } from './markdown/markdown';
 export { default as Code } from './code/code';
 export { default as Splash } from './splash/splash';
+export { default as SplashBanner } from './splash/splashBanner';
 export { default as Container } from './container/container';
 export { default as Group } from './group/group';
 export { default as MainNav } from './mainNav/mainNav';
