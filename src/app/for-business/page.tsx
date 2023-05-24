@@ -1,20 +1,20 @@
 'use client';
 
-import { SplashContext, SplashImage } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
 import businessLocale from '@/locales/for-business';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
 
-const TheGame = withGlobalProviders(() => {
+const ForBusiness = withGlobalProviders(() => {
   const locale = businessLocale['en-US'];
   const splash: SplashImage = {
+    ...DEFAULT_SPLASH,
     src: '/images/handshake.jpg',
-    characteristic: 'dark',
   };
   return (
-    <SplashContext.Provider value={splash}>
+    <SplashProvider value={splash}>
+      <Head/>
       <Page id="Home">
-        <Head/>
         <SplashBanner>
           <PageHeading title={locale.title} />
         </SplashBanner>
@@ -33,8 +33,8 @@ const TheGame = withGlobalProviders(() => {
           </InfoPanel>
         </Container>
       </Page>
-    </SplashContext.Provider>
+    </SplashProvider>
   );
 });
 
-export default TheGame;
+export default ForBusiness;

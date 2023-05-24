@@ -3,14 +3,14 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--color-brand-1-c);
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
 .container {
   box-sizing: border-box;
-  margin: 10rem auto;
+  margin: auto;
   max-width: 60rem;
   padding: 3rem 1rem;
   width: 100%;

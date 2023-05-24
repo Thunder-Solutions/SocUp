@@ -1,5 +1,23 @@
+.container {
+  background-size: cover;
+  position: relative;
+}
+
+.hiddenContent,
+.content {
+  display: grid;
+  gap: 10rem;
+  padding: 10rem 0;
+}
+
 .banner {
   background-color: black;
-  box-sizing: border-box;
-  height: var(--height, 180vh);
+  height: 100%;
+  position: absolute !important; /* override the style attribute set by 3rd party */
+  top: 0;
+}
+
+.hiddenContent {
+  visibility: hidden;
+  pointer-events: none;
 }

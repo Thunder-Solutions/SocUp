@@ -4,3 +4,8 @@
   grid-template-rows: auto 1fr auto;
   height: 100%;
 }
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}

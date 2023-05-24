@@ -1,5 +1,5 @@
 import css from './siteHeader.module.css';
-import { GenericTagProps, getClassName, useScroll, useTheme } from '@/utilities';
+import { GenericTagProps, getClassName, useScroll } from '@/utilities';
 import MainNav from '@/components/mainNav/mainNav';
 import { useContext } from 'react';
 import { SplashContext } from '@/components/splash/splashContext';
@@ -10,7 +10,6 @@ export type SiteHeaderProps = {
 
 const SiteHeader = ({ pageId, className = '', ...props }: SiteHeaderProps) => {
   const { characteristic } = useContext(SplashContext);
-  const [theme] = useTheme();
   const [scrolled] = useScroll();
   const headerClass = getClassName({
     [css.splashHeader]: pageId === 'Home',
@@ -18,9 +17,6 @@ const SiteHeader = ({ pageId, className = '', ...props }: SiteHeaderProps) => {
     [css.ltSplash]: characteristic === 'light',
     [css.scrolled]: pageId === 'Home' ? scrolled : true,
   }, css.siteHeader, className);
-  const themeLogoSrc = theme === 'dark' ? '/logos/logo-light.svg' : '/logos/logo.svg';
-  const splashLogoSrc = characteristic === 'dark' ? '/logos/logo-light.svg' : '/logos/logo.svg';
-  const logoSrc = scrolled ? themeLogoSrc : splashLogoSrc;
   return (
     <header {...props} className={headerClass}>
       <MainNav/>

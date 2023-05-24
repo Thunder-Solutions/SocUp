@@ -1,35 +1,22 @@
 import { DivTagProps } from '@/utilities';
 import css from './container.module.css';
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
-import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { ParallaxBanner } from 'react-scroll-parallax';
+import { useContext } from 'react';
+import { SplashContext } from '../splash/splashContext';
 
 export type ContainerProps = DivTagProps & {
   bgImage?: string,
 };
 
 const Container = ({ children, bgImage = '/images/hex-texture.jpg', ...props }: ContainerProps) => {
-  const outerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-
-  const setOuterHeight = useCallback(() => {
-    if (outerRef.current === null || innerRef.current === null) return;
-    const { height } = innerRef.current.getBoundingClientRect();
-    outerRef.current.style.setProperty('--height', `calc(${height}px + 100vh)`);
-}, [innerRef, outerRef]);
-
-  // calculate height after render
-  useLayoutEffect(() => {
-    setOuterHeight(); // run initially
-    window.addEventListener('scroll', setOuterHeight); // run again on resize
-    window.addEventListener('resize', setOuterHeight); // run again on scroll
-    return () => {
-      window.removeEventListener('scroll', setOuterHeight) // clean up
-      window.removeEventListener('resize', setOuterHeight) // clean up
-    }
-  }, [setOuterHeight]);
+  const splashContext = useContext(SplashContext);
 
   return (
-    <div ref={outerRef} {...props}>
+    <div {...props} className={css.container} style={{
+      backgroundImage: `url(${bgImage})`,
+      paddingTop: splashContext.offset,
+    }}>
+      <div aria-hidden="true" className={css.hiddenContent}>{children}</div>
       <ParallaxBanner
         className={css.banner}
         layers={[
@@ -41,9 +28,7 @@ const Container = ({ children, bgImage = '/images/hex-texture.jpg', ...props }: 
         ]}
         style={{ aspectRatio: '2 / 1' }}
       >
-        <Parallax speed={20} opacity={[3, -1]}>
-          <div ref={innerRef}>{children}</div>
-        </Parallax>
+        <div className={css.content}>{children}</div>
       </ParallaxBanner>
     </div>
   );

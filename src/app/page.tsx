@@ -1,6 +1,6 @@
 'use client';
 
-import { SplashContext, SplashImage } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashContext, SplashImage } from '@/components/splash/splashContext';
 import homeLocale from '@/locales/home';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
@@ -8,13 +8,13 @@ import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash 
 const Home = withGlobalProviders(() => {
   const locale = homeLocale['en-US'];
   const splash: SplashImage = {
+    ...DEFAULT_SPLASH,
     src: '/images/future-tech.jpg',
-    characteristic: 'dark',
   };
   return (
     <SplashContext.Provider value={splash}>
+      <Head/>
       <Page id="Home">
-        <Head/>
         <Splash>
           <SiteTitle />
           <InfoPanel>

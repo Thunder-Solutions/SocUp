@@ -8,7 +8,7 @@ const Page = ({ children, id, ...props }: PageProps) => {
   return (
     <div {...props} className={css.page} id={id}>
       <SiteHeader pageId={id} />
-      <main>{children}</main>
+      <main className={css.main}>{children}</main>
       {/* <SiteFooter/> */}
     </div>
   );

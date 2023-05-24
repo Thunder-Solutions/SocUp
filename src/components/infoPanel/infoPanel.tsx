@@ -1,6 +1,7 @@
+import { PropsWithChildren } from 'react'
 import css from './infoPanel.module.css'
 
-const InfoPanel = ({ children }) => {
+const InfoPanel = ({ children }: PropsWithChildren) => {
   return (
     <div className={css.infoPanel}>
       <div className={css.container}>

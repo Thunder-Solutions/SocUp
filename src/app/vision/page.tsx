@@ -1,6 +1,6 @@
 'use client';
 
-import { SplashContext, SplashImage } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
 import visionLocale from '@/locales/vision';
 import { withGlobalProviders } from '@/utilities';
 import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
@@ -8,13 +8,13 @@ import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } 
 const TheGame = withGlobalProviders(() => {
   const locale = visionLocale['en-US'];
   const splash: SplashImage = {
+    ...DEFAULT_SPLASH,
     src: '/images/galaxy.jpg',
-    characteristic: 'dark',
   };
   return (
-    <SplashContext.Provider value={splash}>
+    <SplashProvider value={splash}>
+      <Head/>
       <Page id="Home">
-        <Head/>
         <SplashBanner>
           <PageHeading title={locale.title} />
         </SplashBanner>
@@ -33,7 +33,7 @@ const TheGame = withGlobalProviders(() => {
           </InfoPanel>
         </Container>
       </Page>
-    </SplashContext.Provider>
+    </SplashProvider>
   );
 });
 
