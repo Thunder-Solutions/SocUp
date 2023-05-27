@@ -17,6 +17,7 @@ export type GlobalLocale = {
   nav: NavItemWithChildren[],
   siteMap: NavItem[],
   social: socialItem[],
+  photoCredits: NavItem[],
   copyright: string,
 }
 

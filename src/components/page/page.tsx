@@ -9,7 +9,7 @@ const Page = ({ children, id, ...props }: PageProps) => {
     <div {...props} className={css.page} id={id}>
       <SiteHeader pageId={id} />
       <main className={css.main}>{children}</main>
-      {/* <SiteFooter/> */}
+      <SiteFooter/>
     </div>
   );
 };
