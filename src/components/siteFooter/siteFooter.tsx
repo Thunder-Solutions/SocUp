@@ -42,7 +42,7 @@ const SiteFooter = ({ className = '', ...props }: SiteFooterProps) => {
         <Dialog title="Photo Credits" openState={photoCreditsDialogState}>
           <ul className={css.list}>
             {locale.photoCredits.map(({ href, text }) => (
-              <li>
+              <li key={href}>
                 <Link href={href}>{text}</Link>
               </li>
             ))}

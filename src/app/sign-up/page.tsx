@@ -22,9 +22,16 @@ const TheGame = withGlobalProviders(() => {
     const valid = emailRegex.test(email);
     if (!valid) throw new Error(locale.emailError);
     setShowForm(false);
-    alert('Nothing happened yet, but after we finish this part, it will send an email.');
+    const response = await fetch('/.netlify/functions/reserveAccount', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    }).then(r => r.json());
+    if (response.error) {
+      console.error(response.error);
+      throw new Error(locale.generalError);
+    }
     return locale.emailSubmitted;
-  }
+  };
 
   const submitAnother = () => {
     setRefresh(!refresh);

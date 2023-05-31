@@ -9,5 +9,6 @@ notified when the app is launched!`,
     emailError: 'Hmm, that email doesn\'t look right.',
     emailSubmitted: 'Thank you for reserving your account!',
     submitAnother: 'Submit Another',
+    generalError: 'Something went wrong on our servers, please try again later.'
   },
 }

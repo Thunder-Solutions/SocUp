@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "netlify dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/functions": "^1.6.0",
     "@types/node": "20.2.0",
+    "@types/nodemailer": "^6.4.8",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@types/react-syntax-highlighter": "^15.5.6",
@@ -17,6 +19,7 @@
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
+    "nodemailer": "^6.9.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
@@ -24,5 +27,8 @@
     "react-scroll-parallax": "^3.4.2",
     "react-syntax-highlighter": "^15.5.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "netlify-cli": "^15.2.0"
   }
 }
