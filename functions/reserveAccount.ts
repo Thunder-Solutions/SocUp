@@ -79,7 +79,8 @@ const handler: Handler = async (event: HandlerEvent) => {
     statusCode: 500,
     body: JSON.stringify({
       error: true,
-      ...response,
+      message: 'Mail Error',
+      emailResponse: response,
     }),
   };
 
