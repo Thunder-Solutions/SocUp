@@ -3,12 +3,18 @@ import { getClassName, ButtonTagProps } from '@/utilities';
 import css from './button.module.css';
 import { PropsWithChildren } from 'react';
 
-export type ButtonComponentProps = ButtonTagProps;
+export type ButtonComponentProps = ButtonTagProps & {
 
-const Button = ({ children, className = '', type = 'submit', ...props }: ButtonComponentProps) => {
+  /**
+   * Denotes how important this button is. The lower the number, the more important. (Same rules as h1, h2, etc.)
+   */
+  importance: number,
+};
+
+const Button = ({ children, className = '', type = 'submit', importance, ...props }: ButtonComponentProps) => {
 
   const buttonClass = getClassName({
-    [css.primary]: type === 'submit',
+    [css.primary]: importance === 1 || (type === 'submit' && typeof importance === 'undefined'),
   }, css.button, className);
 
   return (
