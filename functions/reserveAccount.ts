@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import type { Handler, HandlerEvent, HandlerContext } from '@netlify/functions';
+import type { Handler, HandlerEvent } from '@netlify/functions';
 
 const {
   MAILER_EMAIL,
@@ -51,7 +51,9 @@ const sendEmail = async (_message: EmailMessageText = DEFAULT_MESSAGE) => {
   }
 };
 
-const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+const handler: Handler = async (event: HandlerEvent) => {
+
+  // handle missing body
   if (!event.body) return {
     statusCode: 422,
     body: JSON.stringify({
@@ -59,8 +61,9 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
       message: 'Missing request body',
     }),
   };
+
   const { email } = JSON.parse(event.body);
-  await sendEmail({
+  const response = await sendEmail({
     to: 'jon.dewitt@thunder.solutions',
     subject: `${email} Reserved a SocUp Account`,
     text: `${email} wants to reserve an account.`,
@@ -70,9 +73,21 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
       </p>
     `,
   });
+
+  // handle bad response from nodemailer
+  if (response instanceof Error) return {
+    statusCode: 500,
+    body: JSON.stringify({
+      error: true,
+      ...response,
+    }),
+  };
+
+  // happy path
   return {
     statusCode: 200,
     body: JSON.stringify({
+      emailResponse: response,
       message: 'Success',
     }),
   };

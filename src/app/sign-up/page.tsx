@@ -30,6 +30,7 @@ const TheGame = withGlobalProviders(() => {
       console.error(response.error);
       throw new Error(locale.generalError);
     }
+    console.debug('Response:', response);
     return locale.emailSubmitted;
   };
 
