@@ -15,7 +15,7 @@ type EmailMessageText = {
 }
 
 const DEFAULT_MESSAGE = {
-  to: 'jon.dewitt@thunder.solutions',
+  to: 'steve.harford@socup.io',
   subject: 'Message from SocUp, Inc',
   text: 'This message was sent by our servers at https://socup.netlify.app.',
   html: /* html */`
@@ -64,7 +64,7 @@ const handler: Handler = async (event: HandlerEvent) => {
 
   const { email } = JSON.parse(event.body);
   const response = await sendEmail({
-    to: 'jon.dewitt@thunder.solutions',
+    to: 'steve.harford@socup.io',
     subject: `${email} Reserved a SocUp Account`,
     text: `${email} wants to reserve an account.`,
     html: /* html */`
