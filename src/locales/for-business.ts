@@ -1,14 +1,11 @@
 export default {
   'en-US': {
     title: 'Business Participation',
-    jobBoardTitle: 'Job Board',
-    jobBoardDesc: `Partner companies can use the unique job board for free. There are game
-perks for hiring through SocUp.`,
-    rewardsTitle: 'Rewards Board',
-    rewardsDesc: `Another free feature, businesses can choose which discounts to offer
-customers as they level up within the game.`,
-    bargainingTitle: 'Business Bargaining',
-    bargainingDesc: `A 3rd free feature where SocUp will collectively seeks deals for goods
-and services for partner companies.`
+    freeFeaturesTitle: 'Free Features',
+    freeFeaturesDesc: 'Job Board, rewards board, and business bargaining are all free features.',
+    questsTitle: 'Quests',
+    questsDesc: 'Employee facing businesses will be able to give quests for users who make purchases.',
+    levelUpTitle: 'Level Up',
+    levelUpDesc: 'Businesses earn additional perks as organizations have the ability to [missing content]'
   },
 }

@@ -20,16 +20,16 @@ const ForBusiness = withGlobalProviders(() => {
         </SplashBanner>
         <Container>
           <InfoPanel>
-            <Heading>{locale.jobBoardTitle}</Heading>
-            <p>{locale.jobBoardDesc}</p>
+            <Heading>{locale.freeFeaturesTitle}</Heading>
+            <p>{locale.freeFeaturesDesc}</p>
           </InfoPanel>
           <InfoPanel>
-            <Heading>{locale.rewardsTitle}</Heading>
-            <p>{locale.rewardsDesc}</p>
+            <Heading>{locale.questsTitle}</Heading>
+            <p>{locale.questsDesc}</p>
           </InfoPanel>
           <InfoPanel>
-            <Heading>{locale.bargainingTitle}</Heading>
-            <p>{locale.bargainingDesc}</p>
+            <Heading>{locale.levelUpTitle}</Heading>
+            <p>{locale.levelUpDesc}</p>
           </InfoPanel>
         </Container>
       </Page>

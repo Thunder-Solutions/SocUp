@@ -24,6 +24,10 @@ const TheGame = withGlobalProviders(() => {
             <p>{locale.collaborationDesc}</p>
           </InfoPanel>
           <InfoPanel>
+            <Heading>{locale.industriesTitle}</Heading>
+            <p>{locale.industriesDesc}</p>
+          </InfoPanel>
+          <InfoPanel>
             <Heading>{locale.prosperityTitle}</Heading>
             <p>{locale.prosperityDesc}</p>
           </InfoPanel>
