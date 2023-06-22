@@ -13,10 +13,10 @@ export default {
         text: 'Vision',
         href: '/vision',
       },
-      // {
-      //   text: 'Sign Up',
-      //   href: '/sign-up',
-      // },
+      {
+        text: 'Sign Up',
+        href: '/sign-up',
+      },
     ],
     siteMap: [
       {
@@ -35,10 +35,10 @@ export default {
         text: 'Vision',
         href: '/vision',
       },
-      // {
-      //   text: 'Sign Up',
-      //   href: '/sign-up',
-      // },
+      {
+        text: 'Sign Up',
+        href: '/sign-up',
+      },
     ],
     // social: [
     //   {
