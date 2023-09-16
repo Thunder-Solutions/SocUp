@@ -1,6 +1,10 @@
-export default {
+const global = {
   'en-US': {
     nav: [
+      {
+        text: 'Invest',
+        href: 'https://calendly.com/socup',
+      },
       {
         text: 'The Game',
         href: '/the-game',
@@ -81,3 +85,5 @@ export default {
     copyright: '© SocUp, inc {year} - ALL RIGHTS RESERVED',
   },
 };
+
+export default global;
