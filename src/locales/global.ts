@@ -24,6 +24,10 @@ const global = {
     ],
     siteMap: [
       {
+        text: 'Invest',
+        href: 'https://calendly.com/socup',
+      },
+      {
         text: 'SocUp',
         href: '/',
       },
