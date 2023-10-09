@@ -2,10 +2,6 @@ const global = {
   'en-US': {
     nav: [
       {
-        text: 'Invest',
-        href: 'https://calendly.com/socup',
-      },
-      {
         text: 'The Game',
         href: '/the-game',
       },
@@ -17,16 +13,16 @@ const global = {
         text: 'Vision',
         href: '/vision',
       },
+      {
+        text: 'Connect',
+        href: 'https://calendly.com/socup',
+      },
       // {
       //   text: 'Sign Up',
       //   href: '/sign-up',
       // },
     ],
     siteMap: [
-      {
-        text: 'Invest',
-        href: 'https://calendly.com/socup',
-      },
       {
         text: 'SocUp',
         href: '/',
@@ -42,6 +38,10 @@ const global = {
       {
         text: 'Vision',
         href: '/vision',
+      },
+      {
+        text: 'Connect',
+        href: 'https://calendly.com/socup',
       },
       // {
       //   text: 'Sign Up',

@@ -22,13 +22,21 @@ const Home = withGlobalProviders(() => {
           </InfoPanel>
         </Splash>
         <Container>
-          <InfoPanel>
+          {/* <InfoPanel>
             <Heading>{locale.problemTitle}</Heading>
             <p>{locale.problemDesc}</p>
           </InfoPanel>
           <InfoPanel>
             <Heading>{locale.solutionTitle}</Heading>
             <p>{locale.solutionDesc}</p>
+          </InfoPanel> */}
+          <InfoPanel>
+            <Heading>{locale.aboutTitle}</Heading>
+            <p>{locale.aboutDesc}</p>
+          </InfoPanel>
+          <InfoPanel>
+            <Heading>{locale.rulesTitle}</Heading>
+            <Markdown>{locale.rulesDesc}</Markdown>
           </InfoPanel>
         </Container>
       </Page>

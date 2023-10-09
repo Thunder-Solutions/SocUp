@@ -3,7 +3,7 @@
 import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
 import businessLocale from '@/locales/for-business';
 import { withGlobalProviders } from '@/utilities';
-import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
+import { Container, Head, Heading, InfoPanel, Markdown, Page, PageHeading, SplashBanner } from '@/components';
 
 const ForBusiness = withGlobalProviders(() => {
   const locale = businessLocale['en-US'];
@@ -20,6 +20,9 @@ const ForBusiness = withGlobalProviders(() => {
         </SplashBanner>
         <Container>
           <InfoPanel>
+            <Markdown>{locale.generalDesc}</Markdown>
+          </InfoPanel>
+          {/* <InfoPanel>
             <Heading>{locale.featuresTitle}</Heading>
             <p>{locale.featuresDesc}</p>
           </InfoPanel>
@@ -30,7 +33,7 @@ const ForBusiness = withGlobalProviders(() => {
           <InfoPanel>
             <Heading>{locale.levelUpTitle}</Heading>
             <p>{locale.levelUpDesc}</p>
-          </InfoPanel>
+          </InfoPanel> */}
         </Container>
       </Page>
     </SplashProvider>
