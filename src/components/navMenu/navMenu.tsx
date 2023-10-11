@@ -4,6 +4,7 @@ import { getClassName, NOOP, useContextState } from '@/utilities';
 import Link from '@/components/link/link';
 import Icon from '@/components/icon/icon';
 import { OverlayContext } from '@/components/overlay/overlay';
+import Image from 'next/image';
 
 export type NavMenuItem = {
   text: string,
@@ -59,7 +60,7 @@ const NavMenu = ({
       <button onClick={toggle} className={`${css.link} ${css.linkWithIcon} ${css.toggler}`}>
         {nested
           ? <><Icon type="Previous" /> <span>Back</span></>
-          : <><span className={css.siteTitle}>SocUp</span> <Icon className={css.close} type="Close" /></>
+          : <><Link type="none" href="/"><Image src="/logos/socup-logo.svg" alt="SocUp" className={css.siteTitle} width={688} height={289} /></Link> <Icon className={css.close} type="Close" /></>
         }
       </button>
       {href

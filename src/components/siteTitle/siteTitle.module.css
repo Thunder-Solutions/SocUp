@@ -1,8 +1,7 @@
 .siteTitle {
-  font-size: 8rem;
-  font-family: var(--font-logo);
-  font-weight: normal;
-  text-align: center;
+  width: 40rem;
+  height: auto;
+  object-fit: contain;
   position: relative;
   z-index: 1;
 }
