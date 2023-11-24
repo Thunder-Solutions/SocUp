@@ -43,6 +43,11 @@ const sendEmail = async (_message: EmailMessageText = DEFAULT_MESSAGE) => {
       privateKey: MAILER_PRIVATE_KEY,
     },
   });
+  console.log({
+    MAILER_EMAIL,
+    MAILER_CLIENT_ID,
+    MAILER_PRIVATE_KEY,
+  });
   try {
     await transporter.verify();
     return await transporter.sendMail(message);
