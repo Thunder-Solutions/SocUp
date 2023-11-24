@@ -40,7 +40,7 @@ const sendEmail = async (_message: EmailMessageText = DEFAULT_MESSAGE) => {
       type: 'OAuth2',
       user: MAILER_EMAIL,
       serviceClient: MAILER_CLIENT_ID,
-      privateKey: MAILER_PRIVATE_KEY,
+      privateKey: MAILER_PRIVATE_KEY?.replace(/\\n/g, '\n'),
     },
   });
   console.log({
