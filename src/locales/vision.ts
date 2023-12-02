@@ -1,4 +1,4 @@
-export default {
+const vision = {
   'en-US': {
     title: 'Vision',
     collaborationTitle: 'Collaboration',
@@ -11,3 +11,5 @@ export default {
     spaceDesc: 'Humans are going to space and SocUp wants to speed up the process. By creating a new economic model where money grows in line with significant infrastructure upgrades, money and value will increase exponentially over time. Money at the end of the day is a social construct and SocUp redefines by creating alternatives to the current game of monopoly everyone currently plays. After 7-10 years, SocUp expects to be ready for a full Mars Mission rather than just a probe team.',
   },
 }
+
+export default vision;

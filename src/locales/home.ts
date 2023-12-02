@@ -1,4 +1,4 @@
-export default {
+const homeLocales = {
   'en-US': {
     title: '> Society has entered the chat.',
     problemTitle: 'The Problem',
@@ -17,4 +17,6 @@ SocUp is around an 8-year game, advancing through historical eras with modern an
 - All resources, points, items, etc will be converted to the SocUp app by linking your other social media profiles.
 - [Visit the game site.](https://www.facebook.com/groups/1006378860630624)`,
   },
-}
+};
+
+export default homeLocales;

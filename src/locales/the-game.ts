@@ -1,4 +1,4 @@
-export default {
+const theGame = {
   'en-US': {
     title: 'The Game Experience',
     howToPlayTitle: 'How to Play',
@@ -9,3 +9,5 @@ export default {
     upTeamsDesc: 'This is where the crowdsourcing magic happens. Through a variety of topics, users come together to collaborate and propose ideas that enhance the direction of their community and society. Users can belong to multiple UpTeams, and depending upon the nature of the ideas, can earn coin and collectibles for their contributions.',
   },
 }
+
+export default theGame;

@@ -1,4 +1,4 @@
-export default {
+const forBusiness = {
   'en-US': {
     title: 'Business Participation',
     generalDesc: `- SocUp is a unique opportunity to connect with your local community and ensure steady profits.
@@ -14,3 +14,5 @@ export default {
     levelUpDesc: 'Businesses earn additional perks as organizations have the ability to level up as well.'
   },
 }
+
+export default forBusiness;

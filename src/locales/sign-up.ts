@@ -1,4 +1,4 @@
-export default {
+const signUp = {
   'en-US': {
     title: 'Sign Up',
     reserveTitle: 'Reserve Your Account',
@@ -12,3 +12,5 @@ notified when the app is launched!`,
     generalError: 'Something went wrong on our servers, please try again later.'
   },
 }
+
+export default signUp;

@@ -4,7 +4,8 @@ import { createContext } from 'react';
 export const DEFAULT_LOCALE: GlobalLocale = {
   nav: [],
   siteMap: [],
-  social: [],
+  // social: [],
+  photoCredits: [],
   copyright: '',
 }
 

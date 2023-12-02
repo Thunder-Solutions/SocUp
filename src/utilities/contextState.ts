@@ -4,17 +4,15 @@
 import { useState, createContext, useContext, useEffect, Context } from 'react';
 import { NOOP } from './constants';
 
-type State<T> = {
+export type ContextState<T> = Context<{
   value: T,
-  setValue: (newValue: unknown) => void,
-}
-
-export type ContextState<T> = Context<State<T>>
+  setValue: (newValue?: unknown) => void,
+}>;
 
 /**
  * This will create and return a Context object which can be used with `useContextState`.
  */
-export const createContextState = <T>(initialState: T = null): ContextState<T> => {
+export const createContextState = <T>(initialState: T): ContextState<T> => {
 
   // pass the value to a nested part of the actual context,
   // so the setter can be safely abstracted away.
