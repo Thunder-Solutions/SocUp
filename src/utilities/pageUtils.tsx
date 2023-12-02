@@ -27,10 +27,12 @@ const parseVariablesInString = (str: string, locale: LocaleStr, variables: Varia
 export const parseVariables = <T extends DeepStringObject>(localeData: T, locale: LocaleStr, variables: VariablesObject): T => {
   const init = (Array.isArray(localeData) ? [] : {}) as T;
   return Object.entries(localeData).reduce((parsedLocaleData, [key, value]) => {
-    if (!Array.isArray(parsedLocaleData)) {
-      if (typeof value === 'string') parsedLocaleData[key] = parseVariablesInString(value, locale, variables);
-      else parsedLocaleData[key] = parseVariables(value, locale, variables);
-    }
+
+    // TODO: This is a hack to get around the fact that the locale data is not typed correctly
+    // @ts-ignore
+    if (typeof value === 'string') parsedLocaleData[key] = parseVariablesInString(value, locale, variables);
+    // @ts-ignore
+    else parsedLocaleData[key] = parseVariables(value, locale, variables);
     return parsedLocaleData;
   }, init);
 };
