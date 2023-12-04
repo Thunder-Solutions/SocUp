@@ -1,45 +1,45 @@
 .siteHeader {
-  color: var(--color-brand-1-c);
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: minmax(0, 1fr);
-  height: 7rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  transition: all 0.5s;
+	color: var(--color-brand-1-c);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: minmax(0, 1fr);
+	height: 7rem;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	transition: all 0.5s;
 }
 
 .splashHeader {
-  --color: var(--color-site-c);
-  --color-c: var(--color-site-1);
-  position: fixed;
-  width: 100%;
+	--color: var(--color-site-c);
+	--color-c: var(--color-site-1);
+	position: fixed;
+	width: 100%;
 }
 
 .dkSplash:not(.scrolled) {
-  --color: var(--color-dkimg-1);
-  --color-c: var(--color-dkimg-c);
+	--color: var(--color-dkimg-1);
+	--color-c: var(--color-dkimg-c);
 }
 
 .ltSplash:not(.scrolled) {
-  --color: var(--color-ltimg-1);
-  --color-c: var(--color-ltimg-c);
+	--color: var(--color-ltimg-1);
+	--color-c: var(--color-ltimg-c);
 }
 
 .scrolled {
-  background-color: var(--color-brand-1);
+	background-color: var(--color-brand-1);
 
-  /* there's some bug with the overflow here... */
-  /* backdrop-filter: blur(10px); */
-  -webkit-backdrop-filter: blur(10px);
-  height: 7rem;
+	/* there's some bug with the overflow here... */
+	/* backdrop-filter: blur(10px); */
+	-webkit-backdrop-filter: blur(10px);
+	height: 7rem;
 }
 
 .logo {
-  box-sizing: border-box;
-  height: 100%;
-  object-fit: contain;
-  max-width: 100%;
-  padding: 1.5rem;
+	box-sizing: border-box;
+	height: 100%;
+	object-fit: contain;
+	max-width: 100%;
+	padding: 1.5rem;
 }

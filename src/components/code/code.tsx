@@ -5,35 +5,32 @@ import { GenericTagProps } from '@/utilities';
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter';
 
 export type CodeProps = {
-  /**
-   * If inline is true, `<code>` will be used without `<pre>`
-   * @defaultValue `false`
-   */
-  inline?: boolean,
+	/**
+	 * If inline is true, `<code>` will be used without `<pre>`
+	 * @defaultValue `false`
+	 */
+	inline?: boolean;
 } & GenericTagProps;
 
 const Code = ({ inline, className, children, ...props }: CodeProps) => {
-  const match = /language-(\w+)/.exec(className || '');
-  const [theme, setTheme] = useState({});
-  useEffect(() => {
-    const setPrismTheme = async () => {
-      const prism = await import('react-syntax-highlighter/dist/esm/styles/prism');
-      setTheme(prism.atomDark);
-    };
-    setPrismTheme();
-  }, []);
-  return !inline && match?.[1]
-    ? <SyntaxHighlighter
-        style={theme}
-        language={match[1]}
-        PreTag="div"
-        {...(props as SyntaxHighlighterProps)}
-      >
-        {String(children).replace(/\n$/, '')}
-      </SyntaxHighlighter>
-    : <code className={`${className} ${css.inlineCode}`} {...props}>
-        {children}
-      </code>;
+	const match = /language-(\w+)/.exec(className || '');
+	const [theme, setTheme] = useState({});
+	useEffect(() => {
+		const setPrismTheme = async () => {
+			const prism = await import('react-syntax-highlighter/dist/esm/styles/prism');
+			setTheme(prism.atomDark);
+		};
+		setPrismTheme();
+	}, []);
+	return !inline && match?.[1] ? (
+		<SyntaxHighlighter style={theme} language={match[1]} PreTag="div" {...(props as SyntaxHighlighterProps)}>
+			{String(children).replace(/\n$/, '')}
+		</SyntaxHighlighter>
+	) : (
+		<code className={`${className} ${css.inlineCode}`} {...props}>
+			{children}
+		</code>
+	);
 };
 
 export default Code;

@@ -4,93 +4,90 @@
   understand the color naming convention. */
 
 :root {
+	/* Static colors regardless of theme */
+	--color-brand-1: rgba(0, 2, 56, 0.2);
+	--color-brand-1-c: #ffffff;
+	--color-brand-2: #1400ff;
 
-  /* Static colors regardless of theme */
-  --color-brand-1: rgba(0, 2, 56, 0.2);
-  --color-brand-1-c: #ffffff;
-  --color-brand-2: #1400FF;
-
-  /* These colors are intended to contrast against images
+	/* These colors are intended to contrast against images
     no matter which theme is used. */
-  --color-dkimg-1: #dce6e9;
-  --color-dkimg-c: #5d5d68;
-  --color-ltimg-1: #5d5d68;
-  --color-ltimg-c: #dce6e9;
+	--color-dkimg-1: #dce6e9;
+	--color-dkimg-c: #5d5d68;
+	--color-ltimg-1: #5d5d68;
+	--color-ltimg-c: #dce6e9;
 
-  /* Default fonts, before theme overrides */
-  --font-logo: 'Monoton', 'serif';
-  --font-display: 'Bruno Ace', serif;
-  --font-content: 'Inter', sans-serif;
+	/* Default fonts, before theme overrides */
+	--font-logo: 'Monoton', 'serif';
+	--font-display: 'Bruno Ace', serif;
+	--font-content: 'Inter', sans-serif;
 
-  /* Setting as few document defaults as possible in favor of
+	/* Setting as few document defaults as possible in favor of
     encapsulated CSS at the component level */
-  background-color: var(--color-site-1);
-  color: var(--color-site-1-c);
-  font-family: var(--font-content);
-  scroll-behavior: smooth;
+	background-color: var(--color-site-1);
+	color: var(--color-site-1-c);
+	font-family: var(--font-content);
+	scroll-behavior: smooth;
 
-  /* 62.5% is typically 10px, making 1rem = 10px for easy reference.
+	/* 62.5% is typically 10px, making 1rem = 10px for easy reference.
     Keeping the units relative is better for accessibility. */
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 option:checked:not(:disabled) {
-  background-color: var(--color-accent-1);
-  color: var(--color-accent-1-c);
+	background-color: var(--color-accent-1);
+	color: var(--color-accent-1-c);
 }
 
 ::selection {
-  background: var(--color-accent-1);
-  color: var(--color-accent-1-c);
+	background: var(--color-accent-1);
+	color: var(--color-accent-1-c);
 }
 
 ::-moz-selection {
-  background: var(--color-accent-1);
-  color: var(--color-accent-1-c);
+	background: var(--color-accent-1);
+	color: var(--color-accent-1-c);
 }
 
 body {
-
-  /* Setting the generic font size back to 20px for legibility */
-  font-size: 2rem;
+	/* Setting the generic font size back to 20px for legibility */
+	font-size: 2rem;
 }
 
 /* make sure the outermost elements always take up 100% of the vertical space */
 :root,
 body,
 #__next {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 :root.base {
+	/* Colors */
+	--color-site-1: #5d5d68;
+	--color-site-1-c: #dce6e9;
+	--color-site-2: #3c5868;
+	--color-site-2-c: #c8deeb;
+	--color-site-2-1: #224559;
 
-  /* Colors */
-  --color-site-1: #5d5d68;
-  --color-site-1-c: #dce6e9;
-  --color-site-2: #3c5868;
-  --color-site-2-c: #c8deeb;
-  --color-site-2-1: #224559;
+	--color-accent-1: #98e9f2;
+	--color-accent-1-1: #60befc;
+	--color-accent-1-c: #000000;
+	--color-accent-2: #0067b6;
+	--color-accent-2-1: #1544df;
+	--color-accent-2-c: #ffffff;
 
-  --color-accent-1: #98e9f2;
-  --color-accent-1-1: #60befc;
-  --color-accent-1-c: #000000;
-  --color-accent-2: #0067b6;
-  --color-accent-2-1: #1544df;
-  --color-accent-2-c: #ffffff;
+	--color-disabled-1: #373434;
+	--color-disabled-1-c: #6f6d6d;
 
-  --color-disabled-1: #373434;
-  --color-disabled-1-c: #6f6d6d;
+	--color-success-1: #173713;
+	--color-success-1-c: #b7f2b7;
+	--color-success-1-1: #6cbb6c;
 
-  --color-success-1: #173713;
-  --color-success-1-c: #b7f2b7;
-  --color-success-1-1: #6cbb6c;
+	--color-warning-1: #372f13;
+	--color-warning-1-c: #f8f3d3;
+	--color-warning-1-1: #bba56c;
 
-  --color-warning-1: #372f13;
-  --color-warning-1-c: #f8f3d3;
-  --color-warning-1-1: #bba56c;
-
-  --color-error-1: #371313;
-  --color-error-1-c: #f8d3d3;
-  --color-error-1-1: #bb6c6c;
+	--color-error-1: #371313;
+	--color-error-1-c: #f8d3d3;
+	--color-error-1-1: #bb6c6c;
 }

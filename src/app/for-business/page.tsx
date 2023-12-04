@@ -1,43 +1,37 @@
 'use client';
 
 import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
-import businessLocale from '@/locales/for-business';
-import { withGlobalProviders } from '@/utilities';
-import { Container, Head, Heading, InfoPanel, Markdown, Page, PageHeading, SplashBanner } from '@/components';
+import { Container, Head, InfoPanel, Markdown, Page, PageHeading, SplashBanner } from '@/components';
 
-const ForBusiness = withGlobalProviders(() => {
-  const locale = businessLocale['en-US'];
-  const splash: SplashImage = {
-    ...DEFAULT_SPLASH,
-    src: '/images/handshake.jpg',
-  };
-  return (
-    <SplashProvider value={splash}>
-      <Head/>
-      <Page id="Home">
-        <SplashBanner>
-          <PageHeading title={locale.title} />
-        </SplashBanner>
-        <Container>
-          <InfoPanel>
-            <Markdown>{locale.generalDesc}</Markdown>
-          </InfoPanel>
-          {/* <InfoPanel>
-            <Heading>{locale.featuresTitle}</Heading>
-            <p>{locale.featuresDesc}</p>
-          </InfoPanel>
-          <InfoPanel>
-            <Heading>{locale.questsTitle}</Heading>
-            <p>{locale.questsDesc}</p>
-          </InfoPanel>
-          <InfoPanel>
-            <Heading>{locale.levelUpTitle}</Heading>
-            <p>{locale.levelUpDesc}</p>
-          </InfoPanel> */}
-        </Container>
-      </Page>
-    </SplashProvider>
-  );
-});
+const content = {
+	title: 'Business Participation',
+	generalDesc: `- SocUp is a unique opportunity to connect with your local community and ensure steady profits.
+- SocUp prioritizes partnerships that enhance employee's lives while also providing quality product or services to their communities.
+- Job Board, rewards board, buying group, advertising, points boosts, and many more features for businesses.
+- SocUp partners will have the ability to generate local quests for the players in their community while also having the opportunity to be the hero of local stories.
+`,
+};
+
+const ForBusiness = () => {
+	const splash: SplashImage = {
+		...DEFAULT_SPLASH,
+		src: '/images/handshake.jpg',
+	};
+	return (
+		<SplashProvider value={splash}>
+			<Head />
+			<Page id="Home">
+				<SplashBanner>
+					<PageHeading title={content.title} />
+				</SplashBanner>
+				<Container>
+					<InfoPanel>
+						<Markdown>{content.generalDesc}</Markdown>
+					</InfoPanel>
+				</Container>
+			</Page>
+		</SplashProvider>
+	);
+};
 
 export default ForBusiness;

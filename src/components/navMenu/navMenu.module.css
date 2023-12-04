@@ -1,82 +1,86 @@
 .nav {
-  background-color: var(--color-brand-1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-sizing: border-box;
-  color: var(--color-brand-1-c);
-  display: grid;
-  font-family: var(--font-display);
-  gap: 0.5rem;
-  grid-auto-rows: min-content;
-  grid-template-columns: minmax(0, 1fr);
-  height: 100%;
-  max-width: 40rem;
-  overflow: hidden;
-  padding: 0.5rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: right;
-  transition: visibility 0.5s, max-width 0.5s;
-  width: 75vw;
-  z-index: 1;
+	background-color: var(--color-brand-1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-sizing: border-box;
+	color: var(--color-brand-1-c);
+	display: grid;
+	font-family: var(--font-display);
+	gap: 0.5rem;
+	grid-auto-rows: min-content;
+	grid-template-columns: minmax(0, 1fr);
+	height: 100%;
+	max-width: 40rem;
+	overflow: hidden;
+	padding: 0.5rem 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: right;
+	transition:
+		visibility 0.5s,
+		max-width 0.5s;
+	width: 75vw;
+	z-index: 1;
 }
 
 .siteTitle {
-  width: 10rem;
-  height: auto;
-  object-fit: contain;
+	width: 10rem;
+	height: auto;
+	object-fit: contain;
 }
 
 .close {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 
 .nav:not(.navOpen) {
-  max-width: 0;
-  transition: visibility 0s linear 0.5s, max-width 0.5s;
-  visibility: hidden;
+	max-width: 0;
+	transition:
+		visibility 0s linear 0.5s,
+		max-width 0.5s;
+	visibility: hidden;
 }
 
 .nav .link {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font: inherit;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: inherit;
-  text-overflow: ellipsis;
-  width: 100%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: inherit;
+	text-overflow: ellipsis;
+	width: 100%;
 }
 
 .nav .link,
 .nav .link:hover,
 .nav .link:active,
 .nav .link:visited {
-  box-sizing: border-box;
-  color: var(--color-site-2-c);
-  display: block;
-  padding: 2rem 3rem;
-  text-decoration: none;
-  transition: all 0.5s;
+	box-sizing: border-box;
+	color: var(--color-site-2-c);
+	display: block;
+	padding: 2rem 3rem;
+	text-decoration: none;
+	transition: all 0.5s;
 }
 
 .nav .link:hover {
-  background-color: var(--color-site-2-c);
-  color: var(--color-site-2);
+	background-color: var(--color-site-2-c);
+	color: var(--color-site-2);
 }
 
 .nav .linkWithIcon,
 .nav .linkWithIcon:hover,
 .nav .linkWithIcon:active,
 .nav .linkWithIcon:visited {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr auto;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr auto;
 }
 
 .nav .toggler {
-  border-bottom: 0.1rem solid;
-  text-align: left;
+	border-bottom: 0.1rem solid;
+	text-align: left;
 }

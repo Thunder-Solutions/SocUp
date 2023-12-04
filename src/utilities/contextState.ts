@@ -5,21 +5,20 @@ import { useState, createContext, useContext, useEffect, Context } from 'react';
 import { NOOP } from './constants';
 
 export type ContextState<T> = Context<{
-  value: T,
-  setValue: (newValue?: unknown) => void,
+	value: T;
+	setValue: (newValue?: unknown) => void;
 }>;
 
 /**
  * This will create and return a Context object which can be used with `useContextState`.
  */
 export const createContextState = <T>(initialState: T): ContextState<T> => {
-
-  // pass the value to a nested part of the actual context,
-  // so the setter can be safely abstracted away.
-  return createContext({
-    value: initialState,
-    setValue: NOOP,
-  });
+	// pass the value to a nested part of the actual context,
+	// so the setter can be safely abstracted away.
+	return createContext({
+		value: initialState,
+		setValue: NOOP,
+	});
 };
 
 /**
@@ -27,17 +26,18 @@ export const createContextState = <T>(initialState: T): ContextState<T> => {
  * argument.  The initial state is determined by `createContextState` instead.
  */
 export const useContextState = <T>(Context: ContextState<T>): [T, Function] => {
+	// handle wrong type passed in
+	if (typeof Context !== 'object') throw new TypeError(`Expected type "object" but got "${typeof Context}"`);
 
-  // handle wrong type passed in
-  if (typeof Context !== 'object') throw new TypeError(`Expected type "object" but got "${typeof Context}"`);
+	// wrap the context with `useState`
+	const context = useContext(Context);
+	const [state, setState] = useState(context.value);
 
-  // wrap the context with `useState`
-  const context = useContext(Context);
-  const [state, setState] = useState(context.value);
+	// when local state updates, sync the entire context with it
+	useEffect(() => {
+		context.setValue(state);
+	}, [state]);
 
-  // when local state updates, sync the entire context with it
-  useEffect(() => { context.setValue(state) }, [state])
-
-  // return an array of [state, setState] just like `useState` would
-  return [context.value, setState]
+	// return an array of [state, setState] just like `useState` would
+	return [context.value, setState];
 };

@@ -1,54 +1,54 @@
 .footer {
-  border-top: 1rem solid var(--color-brand-1);
-  background-color: var(--color-site-2);
-  color: var(--color-site-2-c);
-  font-size: 1.4rem;
-  text-align: center;
+	border-top: 1rem solid var(--color-brand-1);
+	background-color: var(--color-site-2);
+	color: var(--color-site-2-c);
+	font-size: 1.4rem;
+	text-align: center;
 }
 
 .links {
-  align-items: center;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: auto auto;
-  justify-content: center;
-  padding: 2rem 1rem;
+	align-items: center;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	padding: 2rem 1rem;
 }
 
 .social {
-  display: flex;
-  font-size: 3rem;
-  gap: 1rem;
+	display: flex;
+	font-size: 3rem;
+	gap: 1rem;
 }
 
 .siteMapLink {
-  padding: 1rem 2rem;
-  vertical-align: middle;
+	padding: 1rem 2rem;
+	vertical-align: middle;
 }
 
 .socialLink {
-  display: grid; /* removes unwanted whitespace */
+	display: grid; /* removes unwanted whitespace */
 }
 
 .socialLink:hover:after {
-  width: 0;
+	width: 0;
 }
 
 .other {
-  background-color: var(--color-brand-1);
-  padding: 1rem;
+	background-color: var(--color-brand-1);
+	padding: 1rem;
 }
 
 .dialogLink {
-  background: none;
-  border: none;
-  color: var(--color-site-1-c);
-  cursor: pointer;
-  margin-left: 2rem;
-  text-decoration: underline;
+	background: none;
+	border: none;
+	color: var(--color-site-1-c);
+	cursor: pointer;
+	margin-left: 2rem;
+	text-decoration: underline;
 }
 
 .list {
-  margin: 0;
-  padding: 3rem;
+	margin: 0;
+	padding: 3rem;
 }

@@ -1,19 +1,19 @@
 .infoPanel {
-  background-color: var(--color-brand-1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--color-brand-1-c);
-  width: 100%;
-  position: relative;
-  z-index: 1;
+	background-color: var(--color-brand-1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	color: var(--color-brand-1-c);
+	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .container {
-  box-sizing: border-box;
-  margin: auto;
-  max-width: 60rem;
-  padding: 3rem 1rem;
-  width: 100%;
-  text-align: center;
-  text-shadow: 0 0 1rem var(--color-brand-2);
+	box-sizing: border-box;
+	margin: auto;
+	max-width: 60rem;
+	padding: 3rem 1rem;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0 0 1rem var(--color-brand-2);
 }

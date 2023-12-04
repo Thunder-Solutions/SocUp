@@ -1,10 +1,10 @@
 .dialog {
-  background-color: var(--color-site-1);
-  border: 0 solid;
-  border-radius: 0.5rem;
-  color: var(--color-site-1-c);
-  padding: 0;
-  text-align: left;
+	background-color: var(--color-site-1);
+	border: 0 solid;
+	border-radius: 0.5rem;
+	color: var(--color-site-1-c);
+	padding: 0;
+	text-align: left;
 }
 
 /* NOTES:
@@ -18,38 +18,40 @@
   That means this cannot be consolidated either, unfortunately.
 
 */
-.dialog::backdrop { /* native */
-  background-color: rgba(0, 0, 0, 0.75);
+.dialog::backdrop {
+	/* native */
+	background-color: rgba(0, 0, 0, 0.75);
 }
-.dialog + .backdrop { /* for the polyfill */
-  background-color: rgba(0, 0, 0, 0.75);
+.dialog + .backdrop {
+	/* for the polyfill */
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 .header {
-  align-items: center;
-  background-color: var(--color-site-2);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 4rem;
-  padding: 1rem 2rem;
+	align-items: center;
+	background-color: var(--color-site-2);
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 4rem;
+	padding: 1rem 2rem;
 }
 
 .title {
-  text-align: left;
+	text-align: left;
 }
 
 .closeButton {
-  height: 2em;
-  width: 2em;
-  border-radius: 50%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+	height: 2em;
+	width: 2em;
+	border-radius: 50%;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 }
 
 .body {
-  padding: 2rem;
-  max-height: 50vh;
-  overflow: auto;
+	padding: 2rem;
+	max-height: 50vh;
+	overflow: auto;
 }

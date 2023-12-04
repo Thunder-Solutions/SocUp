@@ -7,17 +7,21 @@ export const OverlayContext = createContextState(false);
 export type OverlayProps = DivTagProps;
 
 const Overlay = ({ children, className = '', ...props }: OverlayProps) => {
-  const [showOverlay, setShowOverlay] = useState(false);
-  const overlayClass = getClassName({
-    [css.visible]: showOverlay,
-  }, css.overlay, className);
-  return (
-    // @ts-ignore
-    <OverlayContext.Provider value={{ value: showOverlay, setValue: setShowOverlay }}>
-      <div {...props} className={overlayClass}></div>
-      {children}
-    </OverlayContext.Provider>
-  );
+	const [showOverlay, setShowOverlay] = useState(false);
+	const overlayClass = getClassName(
+		{
+			[css.visible]: showOverlay,
+		},
+		css.overlay,
+		className,
+	);
+	return (
+		// @ts-ignore
+		<OverlayContext.Provider value={{ value: showOverlay, setValue: setShowOverlay }}>
+			<div {...props} className={overlayClass}></div>
+			{children}
+		</OverlayContext.Provider>
+	);
 };
 
 export default Overlay;

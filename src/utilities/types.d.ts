@@ -6,8 +6,8 @@ export type ValueOf<T> = T[keyof T];
 export type ReactState<T> = [T, Dispatch<SetStateAction<T>>];
 
 export interface Constructor<T> {
-  new (): T;
-  prototype: T;
+	new (): T;
+	prototype: T;
 }
 
 // DEFAULT TAG PROPS

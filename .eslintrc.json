@@ -1,8 +1,23 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "react-hooks/rules-of-hooks": "warn",
-    "react-hooks/exhaustive-deps": "off",
-    "import/no-anonymous-default-export": "warn"
-  }
+	"extends": "next/core-web-vitals",
+	"plugins": ["prefer-arrow"],
+	"rules": {
+		"indent": ["error", "tab"],
+		"semi": ["error", "always"],
+		"prefer-arrow/prefer-arrow-functions": [
+			"error",
+			{
+				"disallowPrototype": true,
+				"singleReturnOnly": false,
+				"classPropertiesAllowed": false
+			}
+		],
+		"prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+		"func-style": ["error", "expression", { "allowArrowFunctions": true }],
+		"comma-dangle": ["error", "always-multiline"],
+		"@next/next/no-page-custom-font": "off",
+		"react-hooks/rules-of-hooks": "warn",
+		"react-hooks/exhaustive-deps": "off",
+		"import/no-anonymous-default-export": "warn"
+	}
 }

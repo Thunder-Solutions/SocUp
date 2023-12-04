@@ -1,29 +1,33 @@
 .header {
-  padding: 2rem 4rem 4rem;
+	padding: 2rem 4rem 4rem;
 }
 
 .title,
 .subtitle {
-  margin: 0;
-  text-align: center;
+	margin: 0;
+	text-align: center;
 }
 
 .title {
-  border-bottom: 0.1rem solid;
-  font-size: 3rem;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+	border-bottom: 0.1rem solid;
+	font-size: 3rem;
+	margin: 0 auto;
+	padding: 1rem 2rem;
 }
 
 .subtitle {
-  padding-top: 0.5rem;
-  font-weight: normal;
+	padding-top: 0.5rem;
+	font-weight: normal;
 }
 
 @media (min-width: 45em) {
-  .title { font-size: 4rem; }
+	.title {
+		font-size: 4rem;
+	}
 }
 
 @media (min-width: 63em) {
-  .title { font-size: 5rem; }
+	.title {
+		font-size: 5rem;
+	}
 }

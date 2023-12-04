@@ -1,23 +1,23 @@
 .container {
-  background-size: cover;
-  position: relative;
+	background-size: cover;
+	position: relative;
 }
 
 .hiddenContent,
 .content {
-  display: grid;
-  gap: 10rem;
-  padding: 10rem 0;
+	display: grid;
+	gap: 10rem;
+	padding: 10rem 0;
 }
 
 .banner {
-  background-color: black;
-  height: 100%;
-  position: absolute !important; /* override the style attribute set by 3rd party */
-  top: 0;
+	background-color: black;
+	height: 100%;
+	position: absolute !important; /* override the style attribute set by 3rd party */
+	top: 0;
 }
 
 .hiddenContent {
-  visibility: hidden;
-  pointer-events: none;
+	visibility: hidden;
+	pointer-events: none;
 }
