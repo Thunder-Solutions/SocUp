@@ -1,5 +1,6 @@
 import css from './siteHeader.module.css';
-import { GenericTagProps, getClassName, useScroll } from '@/utilities';
+import { useScroll } from '@/utilities/hooks';
+import { GenericTagProps, getClassName } from '@/utilities';
 import MainNav from '@/components/mainNav/mainNav';
 import { useContext } from 'react';
 import { SplashContext } from '@/components/splash/splashContext';
