@@ -1,11 +1,11 @@
 'use client';
 import { CSSProperties, PropsWithChildren, createContext } from 'react';
 
-export type SplashImage = {
+export type SplashImage = Partial<{
 	src: string;
 	characteristic: 'light' | 'dark';
 	offset: string;
-};
+}>;
 
 export const DEFAULT_SPLASH: SplashImage = {
 	src: '',
@@ -23,7 +23,7 @@ export const SplashProvider = ({
 }>) => {
 	return (
 		<div style={{ '--offset': value.offset, 'display': 'contents' } as CSSProperties}>
-			<SplashContext.Provider value={value}>{children}</SplashContext.Provider>
+			<SplashContext.Provider value={{ ...DEFAULT_SPLASH, ...value }}>{children}</SplashContext.Provider>
 		</div>
 	);
 };

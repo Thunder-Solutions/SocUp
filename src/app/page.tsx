@@ -1,4 +1,4 @@
-import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
+import { SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
 
 const content = {
@@ -18,12 +18,7 @@ SocUp is around an 8-year game, advancing through historical eras with modern an
 
 const Home = () => {
 	return (
-		<SplashProvider
-			value={{
-				...DEFAULT_SPLASH,
-				src: '/images/future-tech.jpg',
-			}}
-		>
+		<SplashProvider value={{ src: '/images/future-tech.jpg' }}>
 			<Head />
 			<Page id="Home">
 				<Splash>

@@ -1,4 +1,4 @@
-import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
+import { SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
 import SignUpForm from './sign-up-form';
 
@@ -17,12 +17,7 @@ notified when the app is launched!`,
 
 const TheGame = () => {
 	return (
-		<SplashProvider
-			value={{
-				...DEFAULT_SPLASH,
-				src: '/images/future-tech.jpg',
-			}}
-		>
+		<SplashProvider value={{ src: '/images/future-tech.jpg' }}>
 			<Head />
 			<Page id="Home">
 				<SplashBanner>

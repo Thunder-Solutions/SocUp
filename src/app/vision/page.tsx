@@ -1,4 +1,4 @@
-import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
+import { SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
 
 const content = {
@@ -19,12 +19,7 @@ const content = {
 
 const TheGame = () => {
 	return (
-		<SplashProvider
-			value={{
-				...DEFAULT_SPLASH,
-				src: '/images/galaxy.jpg',
-			}}
-		>
+		<SplashProvider value={{ src: '/images/galaxy.jpg' }}>
 			<Head />
 			<Page id="Home">
 				<SplashBanner>
