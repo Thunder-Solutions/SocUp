@@ -1,3 +1,4 @@
+'use client';
 import { CSSProperties, PropsWithChildren, createContext } from 'react';
 
 export type SplashImage = {

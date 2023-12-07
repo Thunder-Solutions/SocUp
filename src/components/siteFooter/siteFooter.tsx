@@ -1,3 +1,4 @@
+'use client';
 import Link from '@/components/link/link';
 import { Fragment, useState } from 'react';
 import css from './siteFooter.module.css';

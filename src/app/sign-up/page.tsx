@@ -1,20 +1,6 @@
-'use client';
-
-import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
-import { emailRegex, htmlEmailRegex } from '@/utilities';
-import {
-	Button,
-	Container,
-	Form,
-	Head,
-	Heading,
-	InfoPanel,
-	Input,
-	Page,
-	PageHeading,
-	SplashBanner,
-} from '@/components';
-import { useState } from 'react';
+import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
+import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
+import SignUpForm from './sign-up-form';
 
 const content = {
 	title: 'Sign Up',
@@ -30,39 +16,13 @@ notified when the app is launched!`,
 };
 
 const TheGame = () => {
-	const splash: SplashImage = {
-		...DEFAULT_SPLASH,
-		src: '/images/future-tech.jpg',
-	};
-
-	const [showForm, setShowForm] = useState(true);
-	const [refresh, setRefresh] = useState(false);
-
-	const handleSubmit = async (formData: FormData) => {
-		const email = formData.get('email');
-		if (typeof email !== 'string') throw new Error(content.emailError);
-		const valid = emailRegex.test(email);
-		if (!valid) throw new Error(content.emailError);
-		setShowForm(false);
-		const response = await fetch('/.netlify/functions/reserveAccount', {
-			method: 'POST',
-			body: JSON.stringify({ email }),
-		}).then((r) => r.json());
-		if (response.error) {
-			console.error(response.error);
-			throw new Error(content.generalError);
-		}
-		console.debug('Response:', response);
-		return content.emailSubmitted;
-	};
-
-	const submitAnother = () => {
-		setRefresh(!refresh);
-		setShowForm(true);
-	};
-
 	return (
-		<SplashProvider value={splash}>
+		<SplashProvider
+			value={{
+				...DEFAULT_SPLASH,
+				src: '/images/future-tech.jpg',
+			}}
+		>
 			<Head />
 			<Page id="Home">
 				<SplashBanner>
@@ -72,18 +32,7 @@ const TheGame = () => {
 					<InfoPanel>
 						<Heading>{content.reserveTitle}</Heading>
 						<p>{content.reserveDesc}</p>
-						<Form onSubmit={handleSubmit} key={refresh}>
-							{showForm ? (
-								<>
-									<Input label={content.emailLabel} name="email" required pattern={htmlEmailRegex} />
-									<Button>{content.submitLabel}</Button>
-								</>
-							) : (
-								<Button type="button" importance={1} onClick={submitAnother}>
-									{content.submitAnother}
-								</Button>
-							)}
-						</Form>
+						<SignUpForm content={content} />
 					</InfoPanel>
 				</Container>
 			</Page>

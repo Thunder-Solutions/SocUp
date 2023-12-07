@@ -1,6 +1,4 @@
-'use client';
-
-import { DEFAULT_SPLASH, SplashContext, SplashImage } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, Heading, InfoPanel, Markdown, Page, SiteTitle, Splash } from '@/components';
 
 const content = {
@@ -19,12 +17,13 @@ SocUp is around an 8-year game, advancing through historical eras with modern an
 };
 
 const Home = () => {
-	const splash: SplashImage = {
-		...DEFAULT_SPLASH,
-		src: '/images/future-tech.jpg',
-	};
 	return (
-		<SplashContext.Provider value={splash}>
+		<SplashProvider
+			value={{
+				...DEFAULT_SPLASH,
+				src: '/images/future-tech.jpg',
+			}}
+		>
 			<Head />
 			<Page id="Home">
 				<Splash>
@@ -44,7 +43,7 @@ const Home = () => {
 					</InfoPanel>
 				</Container>
 			</Page>
-		</SplashContext.Provider>
+		</SplashProvider>
 	);
 };
 

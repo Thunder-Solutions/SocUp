@@ -1,3 +1,4 @@
+'use client';
 import css from './code.module.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { useEffect, useState } from 'react';

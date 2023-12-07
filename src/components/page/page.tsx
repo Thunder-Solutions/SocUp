@@ -1,7 +1,7 @@
+'use client';
 import { DivTagProps } from '@/utilities';
 import css from './page.module.css';
-import { SiteFooter, SiteHeader } from '@/components';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { SiteFooter, SiteHeader, ParallaxProvider } from '@/components';
 
 export type PageProps = DivTagProps;
 

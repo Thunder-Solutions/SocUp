@@ -1,6 +1,4 @@
-'use client';
-
-import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, Heading, InfoPanel, Page, PageHeading, SplashBanner } from '@/components';
 
 const content = {
@@ -17,12 +15,13 @@ const content = {
 };
 
 const TheGame = () => {
-	const splash: SplashImage = {
-		...DEFAULT_SPLASH,
-		src: '/images/people-having-fun.jpg',
-	};
 	return (
-		<SplashProvider value={splash}>
+		<SplashProvider
+			value={{
+				...DEFAULT_SPLASH,
+				src: '/images/people-having-fun.jpg',
+			}}
+		>
 			<Head />
 			<Page id="Home">
 				<SplashBanner>

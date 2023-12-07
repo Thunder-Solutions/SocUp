@@ -1,5 +1,6 @@
+'use client';
 import css from './splash.module.css';
-import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
+import { ParallaxBanner, Parallax } from '../parallax/parallax';
 import { DivTagProps, getClassName } from '@/utilities';
 import { SplashContext } from './splashContext';
 import { useContext } from 'react';

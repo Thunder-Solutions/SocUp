@@ -1,3 +1,4 @@
+'use client';
 import css from './dialog.module.css';
 import DialogPolyfill from 'dialog-polyfill-universal';
 import { useEffect, useRef, useState } from 'react';

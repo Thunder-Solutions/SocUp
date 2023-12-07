@@ -1,3 +1,4 @@
+'use client';
 import css from './mainNav.module.css';
 import { useEffect, useState } from 'react';
 import NavMenu from '@/components/navMenu/navMenu';

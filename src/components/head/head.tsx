@@ -1,3 +1,4 @@
+'use client';
 import NextHead from 'next/head';
 import { PropsWithChildren, useEffect, useState } from 'react';
 

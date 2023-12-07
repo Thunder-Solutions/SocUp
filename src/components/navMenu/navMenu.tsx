@@ -1,3 +1,4 @@
+'use client';
 import css from './navMenu.module.css';
 import { useEffect, useState, useRef } from 'react';
 import { getClassName, NOOP, useContextState } from '@/utilities';

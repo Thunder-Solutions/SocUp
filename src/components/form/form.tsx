@@ -1,3 +1,4 @@
+'use client';
 import Spinner from '@/components/spinner/spinner';
 import { InvalidEvent, SyntheticEvent, useState } from 'react';
 import { getClassName, FormTagProps } from '@/utilities';

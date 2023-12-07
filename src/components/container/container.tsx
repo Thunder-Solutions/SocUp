@@ -1,6 +1,7 @@
+'use client';
 import { DivTagProps } from '@/utilities';
 import css from './container.module.css';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { ParallaxBanner } from '../parallax/parallax';
 import { useContext } from 'react';
 import { SplashContext } from '../splash/splashContext';
 

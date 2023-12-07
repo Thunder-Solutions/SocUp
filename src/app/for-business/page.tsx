@@ -1,6 +1,4 @@
-'use client';
-
-import { DEFAULT_SPLASH, SplashImage, SplashProvider } from '@/components/splash/splashContext';
+import { DEFAULT_SPLASH, SplashProvider } from '@/components/splash/splashContext';
 import { Container, Head, InfoPanel, Markdown, Page, PageHeading, SplashBanner } from '@/components';
 
 const content = {
@@ -13,12 +11,13 @@ const content = {
 };
 
 const ForBusiness = () => {
-	const splash: SplashImage = {
-		...DEFAULT_SPLASH,
-		src: '/images/handshake.jpg',
-	};
 	return (
-		<SplashProvider value={splash}>
+		<SplashProvider
+			value={{
+				...DEFAULT_SPLASH,
+				src: '/images/handshake.jpg',
+			}}
+		>
 			<Head />
 			<Page id="Home">
 				<SplashBanner>

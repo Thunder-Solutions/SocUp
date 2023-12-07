@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useRef, useContext, FocusEventHandler } from 'react';
 import { createContextState, NOOP, getClassName } from '@/utilities';
 import css from './formValidation.module.css';

@@ -1,3 +1,4 @@
+'use client';
 import css from './overlay.module.css';
 import { DivTagProps, createContextState, getClassName } from '@/utilities';
 import { useState } from 'react';

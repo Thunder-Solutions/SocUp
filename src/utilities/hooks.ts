@@ -1,3 +1,4 @@
+'use client';
 import { NOOP } from './constants';
 import { useState, useEffect, useRef } from 'react';
 import { GenericFn } from './types';

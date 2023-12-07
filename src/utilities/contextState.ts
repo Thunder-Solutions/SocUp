@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * @file - Utilities to wrap useContext in order to work like useState.
  */
