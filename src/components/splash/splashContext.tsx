@@ -21,8 +21,9 @@ export const SplashProvider = ({
 }: PropsWithChildren<{
 	value: SplashImage;
 }>) => {
+	const offset = value.offset ?? DEFAULT_SPLASH.offset;
 	return (
-		<div style={{ '--offset': value.offset, 'display': 'contents' } as CSSProperties}>
+		<div style={{ '--offset': offset, 'display': 'contents' } as CSSProperties}>
 			<SplashContext.Provider value={{ ...DEFAULT_SPLASH, ...value }}>{children}</SplashContext.Provider>
 		</div>
 	);
